@@ -26,9 +26,9 @@ export function Navigation() {
             <Link to="/dropbox" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
               Client Dropbox
             </Link>
-            <a href="#contact" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
+            <Link to="/contact" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>

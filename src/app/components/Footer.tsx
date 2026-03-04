@@ -24,9 +24,9 @@ export function Footer() {
             <Link to="/about" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
               About
             </Link>
-            <a href="#contact" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
+            <Link to="/contact" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
           
           {/* Contact & Social */}

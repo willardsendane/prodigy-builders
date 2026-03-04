@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 export function FooterCTA() {
   return (
     <section id="contact" className="bg-[#0a0a0a] py-32 border-t border-white/5">
@@ -5,9 +7,12 @@ export function FooterCTA() {
         <h2 className="text-4xl md:text-5xl mb-12 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
           Ready to build something extraordinary?
         </h2>
-        <button className="px-12 py-5 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
+        <Link
+          to="/contact"
+          className="inline-block px-12 py-5 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm"
+        >
           GET IN TOUCH
-        </button>
+        </Link>
       </div>
     </section>
   );
