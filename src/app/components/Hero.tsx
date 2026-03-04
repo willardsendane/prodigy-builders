@@ -19,7 +19,7 @@ export function Hero({ imageUrl }: HeroProps) {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="tracking-wide mb-6 font-['Blair_ITC'] text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+        <h1 className="tracking-wide mb-6 font-['Blair_ITC'] text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
           Built at Any Scale.
         </h1>
         <p className="text-lg md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto tracking-wide">
