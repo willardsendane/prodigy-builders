@@ -1,0 +1,34 @@
+import { ImageWithFallback } from './figma/ImageWithFallback';
+
+interface HeroProps {
+  imageUrl: string;
+}
+
+export function Hero({ imageUrl }: HeroProps) {
+  return (
+    <section className="relative h-screen w-full flex items-center justify-center">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <ImageWithFallback
+          src={imageUrl}
+          alt="Luxury custom home"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <h1 className="tracking-wide mb-6 font-['Blair_ITC'] text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+          Built at Any Scale.
+        </h1>
+        <p className="text-lg md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto tracking-wide">
+          Custom homes crafted with the precision of a company that builds for communities.
+        </p>
+        <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
+          SEE OUR WORK
+        </button>
+      </div>
+    </section>
+  );
+}
