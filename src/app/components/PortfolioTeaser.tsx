@@ -14,7 +14,7 @@ export function PortfolioTeaser({ projects }: PortfolioTeaserProps) {
   return (
     <section id="work" className="bg-background py-32">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl md:text-5xl mb-20 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
           Our Work.
         </h2>
         

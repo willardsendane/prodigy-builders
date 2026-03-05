@@ -9,11 +9,11 @@ export function DropboxContent() {
           <p className="text-xs md:text-sm tracking-[0.3em] text-foreground/70 mb-6">
             SECURE & ORGANIZED
           </p>
-          <h2 className="text-4xl md:text-5xl mb-8 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-8 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
             Your Project Documents,<br />
             <span style={{ color: '#c9a961' }}>Always Accessible.</span>
           </h2>
-          <p className="text-lg text-foreground/70 leading-relaxed tracking-wide">
+          <p className="text-[0.9rem] md:text-lg text-foreground/70 leading-relaxed tracking-wide">
             Welcome to the Prodigy Builders Client Portal. Access contracts, blueprints, permits, 
             change orders, and project updates all in one secure, centralized location.
           </p>

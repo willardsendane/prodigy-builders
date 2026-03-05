@@ -27,7 +27,7 @@ export function CoreValues() {
         
         <p className="text-accent text-sm tracking-[0.3em] mb-8 text-center">OUR VALUES</p>
         
-        <h2 className="text-4xl md:text-5xl tracking-wider mb-20 text-center text-foreground font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-wider mb-20 text-center text-foreground font-['Blair_ITC']" style={{ fontWeight: 900 }}>
           A Single Standard. For Every Client.
         </h2>
         

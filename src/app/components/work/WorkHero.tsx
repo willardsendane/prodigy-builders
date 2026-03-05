@@ -18,11 +18,11 @@ export function WorkHero() {
         <p className="text-xs md:text-sm tracking-[0.3em] text-foreground/70 mb-6">
           OUR WORK
         </p>
-        <h1 className="tracking-wide mb-6 font-['Blair_ITC'] text-[96px] md:text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+        <h1 className="tracking-wide mb-6 font-['Blair_ITC'] text-[3.375rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
           Every Project,<br />
           <span style={{ color: '#c9a961' }}>A Legacy.</span>
         </h1>
-        <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto tracking-wide">
+        <p className="text-[0.9rem] md:text-xl text-foreground/80 max-w-2xl mx-auto tracking-wide">
           From custom homes to large-scale developments — built with precision, delivered with pride.
         </p>
       </div>

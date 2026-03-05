@@ -23,7 +23,7 @@ export function ProcessTeaser() {
     <section id="process" className="bg-[#f8f8f6] py-32">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl mb-20 text-center text-[#0a0a0a] tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 text-center text-[#0a0a0a] tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
             Our Process.
           </h2>
           

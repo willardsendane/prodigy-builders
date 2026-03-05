@@ -22,7 +22,7 @@ export function ProdigyDifference() {
   return (
     <section className="bg-gradient-to-b from-[#0f0f0f] to-[#141414] py-32">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl md:text-5xl mb-20 text-center tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 text-center tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
           The Prodigy Difference.
         </h2>
         
