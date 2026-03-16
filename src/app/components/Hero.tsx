@@ -23,11 +23,19 @@ export function Hero({ imageUrl }: HeroProps) {
           Built at Any Scale.
         </h1>
         <p className="text-[0.9rem] md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto tracking-wide">
-          Custom homes crafted with the precision of a company that builds for communities.
+          The craftsmanship of a custom builder. The capability of a commercial contractor.
         </p>
-        <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
-          SEE OUR WORK
-        </button>
+        <div className="flex flex-col items-center gap-3">
+          <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
+            START YOUR BUILD
+          </button>
+          <a
+            href="/projects"
+            className="text-sm text-accent underline underline-offset-4 hover:text-accent-foreground transition-colors"
+          >
+            View Our Work
+          </a>
+        </div>
       </div>
     </section>
   );

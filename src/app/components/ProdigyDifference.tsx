@@ -5,7 +5,7 @@ export function ProdigyDifference() {
     {
       icon: Building2,
       title: "Institutional Scale",
-      description: "Our expertise spans from single custom homes to complete housing developments, bringing unmatched capability to every project."
+      description: "Our expertise spans from single custom homes to complete commercial developments, bringing unmatched capability to every project."
     },
     {
       icon: Ruler,
@@ -14,8 +14,8 @@ export function ProdigyDifference() {
     },
     {
       icon: Home,
-      title: "Built for Generations",
-      description: "We don't just build houses—we create lasting legacies with materials and craftsmanship designed to endure."
+      title: "Exceeding Expectations",
+      description: "The home you always pictured — built better than you knew to ask for."
     }
   ];
 
