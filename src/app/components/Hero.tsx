@@ -23,7 +23,7 @@ export function Hero({ imageUrl }: HeroProps) {
           Built at Any Scale.
         </h1>
         <p className="text-[0.9rem] md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto tracking-wide">
-          The craftsmanship of a custom builder. The capability of a commercial contractor.
+        The craftsmanship of a custom builder with the proven capability of a commercial contractor.
         </p>
         <div className="flex flex-col items-center gap-3">
           <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
@@ -31,7 +31,7 @@ export function Hero({ imageUrl }: HeroProps) {
           </button>
           <a
             href="/projects"
-            className="text-sm text-accent underline underline-offset-4 hover:text-accent-foreground transition-colors"
+            className="text-sm text-accent hover:text-accent-foreground transition-colors"
           >
             View Our Work
           </a>
