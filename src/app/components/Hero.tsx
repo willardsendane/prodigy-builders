@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface HeroProps {
@@ -26,15 +27,18 @@ export function Hero({ imageUrl }: HeroProps) {
         The craftsmanship of a custom builder with the proven capability of a commercial contractor.
         </p>
         <div className="flex flex-col items-center gap-3">
-          <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
+          <Link
+            to="/contact"
+            className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm inline-block"
+          >
             START YOUR BUILD
-          </button>
-          <a
-            href="/projects"
+          </Link>
+          <Link
+            to="/work"
             className="text-sm text-accent hover:text-accent-foreground transition-colors"
           >
             View Our Work
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,8 +1,8 @@
 export function CredibilityBar() {
   const stats = [
-    "20+ Years in Business",
-    "150+ Projects Completed",
-    "Trusted by Municipalities Statewide",
+    "10+ Years Building",
+    "150+ Projects Delivered",
+    "State-Contracted Builder",
     "Award-Winning Craftsmanship"
   ];
 
