@@ -1,91 +1,121 @@
-import { WorkHero } from '../components/work/WorkHero';
-import { FilterBar } from '../components/work/FilterBar';
-import { ProjectGrid } from '../components/work/ProjectGrid';
-import { FeaturedProject } from '../components/work/FeaturedProject';
-import { StatsBar } from '../components/work/StatsBar';
-import { Testimonials } from '../components/Testimonials';
-import { FooterCTA } from '../components/FooterCTA';
+const customHomes = [
+  { name: 'Alpine', imageUrl: '/images/Alpine_V1.png' },
+  { name: 'Cottonwood', imageUrl: '/images/Cottonwood_V1.png' },
+  { name: 'Foremaster', imageUrl: '/images/Foremaster_V1.png' },
+  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png' },
+  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png' },
+  { name: 'Hurricane', imageUrl: '/images/Hurricane_V1.png' },
+  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png' },
+];
 
 export function OurWork() {
-  const projects = [
-    {
-      name: "The Highlands Estate",
-      category: "CUSTOM HOME",
-      location: "Provo, UT",
-      imageUrl: "https://images.unsplash.com/photo-1758448756880-01dbaf85597d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBlc3RhdGUlMjBleHRlcmlvcnxlbnwxfHx8fDE3NzE4NjczNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Riverside Modern",
-      category: "RESIDENTIAL",
-      location: "Salt Lake City, UT",
-      imageUrl: "https://images.unsplash.com/photo-1667375721269-448f78e68022?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjByZXNpZGVudGlhbCUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NzE5MjkyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "The Summit Residence",
-      category: "CUSTOM HOME",
-      location: "Park City, UT",
-      imageUrl: "https://images.unsplash.com/photo-1703622338180-5065bc8ffd6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMG1vZGVybiUyMGhvbWUlMjBwYXJrJTIwY2l0eXxlbnwxfHx8fDE3NzE5NzgxMTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Cedar Ridge Development",
-      category: "COMMERCIAL",
-      location: "Orem, UT",
-      imageUrl: "https://images.unsplash.com/photo-1769940878588-b93921a1a09c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tZXJjaWFsJTIwYnVpbGRpbmclMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NzE5NDg1OTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "The Ashford Estate",
-      category: "CUSTOM HOME",
-      location: "Draper, UT",
-      imageUrl: "https://images.unsplash.com/photo-1601232965248-1de646e42468?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXN0b20lMjBtb2Rlcm4lMjByZXNpZGVuY2UlMjBkcmFwZXJ8ZW58MXx8fHwxNzcxOTc4MTE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Lakefront Commons",
-      category: "COMMERCIAL",
-      location: "Lehi, UT",
-      imageUrl: "https://images.unsplash.com/photo-1764470738268-99e79e2c8b05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYWtlZnJvbnQlMjBjb21tZXJjaWFsJTIwcHJvcGVydHl8ZW58MXx8fHwxNzcxOTc4MTE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "The Marlowe",
-      category: "RENOVATION",
-      location: "Provo, UT",
-      imageUrl: "https://images.unsplash.com/photo-1758315417321-83eb30a39710?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob21lJTIwcmVub3ZhdGlvbiUyMGludGVyaW9yfGVufDF8fHx8MTc3MTkzMTQyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Stonegate Townhomes",
-      category: "RESIDENTIAL",
-      location: "Spanish Fork, UT",
-      imageUrl: "https://images.unsplash.com/photo-1759306108529-2b534e8e5f4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0b3duaG9tZSUyMHJlc2lkZW50aWFsJTIwZGV2ZWxvcG1lbnR8ZW58MXx8fHwxNzcxOTc4MTE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "The Weston Build",
-      category: "CUSTOM HOME",
-      location: "Heber City, UT",
-      imageUrl: "https://images.unsplash.com/photo-1753505889211-9cfbac527474?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjdXN0b20lMjBob21lJTIwYWVyaWFsJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc3MTk3ODEwOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Prodigy Builders transformed our vision into a masterpiece that exceeds every expectation. Their attention to detail is unparalleled.",
-      clientName: "Sarah & Michael Chen",
-      homeImageUrl: "https://images.unsplash.com/photo-1613545325268-9265e1609167?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob21lJTIwbGl2aW5nJTIwcm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc3MTk3ODExNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      quote: "The craftsmanship and precision they brought to our home is extraordinary. This is truly a home built for generations.",
-      clientName: "David & Rebecca Martinez",
-      homeImageUrl: "https://images.unsplash.com/photo-1762811054950-b74e0a055c80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwb29sJTIwZXh0ZXJpb3IlMjBldmVuaW5nfGVufDF8fHx8MTc3MTk3ODExNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    }
-  ];
-
   return (
-    <>
-      <WorkHero />
-      <FilterBar />
-      <ProjectGrid projects={projects} />
-      <FeaturedProject />
-      <StatsBar />
-      <Testimonials testimonials={testimonials} />
-      <FooterCTA />
-    </>
+    <main className="bg-background">
+      <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
+        <div className="relative overflow-hidden rounded-xl">
+          <img
+            src="/images/Moms_V1.png"
+            alt="Berkshire Villa featured build hero"
+            className="h-[500px] w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10">
+            <span
+              className="inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
+              style={{ backgroundColor: '#C9A84C' }}
+            >
+              Utah Home Show Featured Build
+            </span>
+            <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
+              Berkshire Villa
+            </h1>
+            <p className="mt-3 max-w-3xl text-base text-white/90 sm:text-lg">
+              As seen at the Utah Home Show, one of Utah&apos;s most celebrated custom builds.
+            </p>
+            <div className="mt-5 h-[3px] w-[220px]" style={{ backgroundColor: '#C9A84C' }} />
+          </div>
+        </div>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <img src="/images/Moms_V3.png" alt="Berkshire Villa exterior angle two" className="h-[420px] w-full rounded-xl object-cover" />
+          <img src="/images/Moms_V4.png" alt="Berkshire Villa exterior angle three" className="h-[420px] w-full rounded-xl object-cover" />
+        </div>
+        <div className="matterport-wrapper mt-6 rounded-xl border border-border">
+          <iframe
+            src="https://my.matterport.com/show/?m=phQb9AB4iYo&brand=0&mls=1&mt=0&search=0&qs=1"
+            title="Berkshire Villa Matterport walkthrough"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight">Custom Homes</h2>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {customHomes.map((project) => (
+            <article key={project.name} className="overflow-hidden rounded-xl border border-border bg-card">
+              <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
+              <div className="p-5">
+                <h3 className="text-xl font-semibold">{project.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Project description coming soon.</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <span className="inline-flex rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          Now Building
+        </span>
+        <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Rose Port</h2>
+        <iframe
+          src="https://my.matterport.com/show/?m=f8WdXb5uWmq&"
+          title="Rose Port Matterport walkthrough"
+          className="mt-6 w-full rounded-xl border border-border"
+          style={{ height: '500px' }}
+          allowFullScreen
+        />
+        <p className="mt-4 text-base text-muted-foreground">
+          Take a live 3D walkthrough of our latest build in progress.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight">Government &amp; Commercial</h2>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <article className="overflow-hidden rounded-xl border border-border bg-card">
+            <img
+              src="/images/Prison_V6.jpg"
+              alt="Utah State Correctional Facility hero"
+              className="h-56 w-full object-cover"
+            />
+            <div className="grid grid-cols-2 gap-2 p-5">
+              <img src="/images/Prison_V1.1.png" alt="Utah State Correctional Facility exterior one" className="h-24 w-full rounded-md object-cover" />
+              <img src="/images/Prison_V3.png" alt="Utah State Correctional Facility exterior two" className="h-24 w-full rounded-md object-cover" />
+              <img src="/images/Prison_V5.png" alt="Utah State Correctional Facility exterior three" className="h-24 w-full rounded-md object-cover" />
+              <img src="/images/Prison_V2.1.jpg" alt="Utah State Correctional Facility exterior four" className="h-24 w-full rounded-md object-cover" />
+            </div>
+            <div className="p-5">
+              <span className="inline-flex rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Government Contracted
+              </span>
+              <h3 className="mt-3 text-xl font-semibold">Utah State Correctional Facility</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A government-contracted build held to the highest compliance and security standards. Due to the nature
+                of this facility, interior photography was not permitted -- but we&apos;re proud to share what we can.
+              </p>
+            </div>
+          </article>
+          <article className="overflow-hidden rounded-xl border border-border bg-card">
+            <div className="flex h-56 items-center justify-center bg-muted text-sm text-muted-foreground">
+              Placeholder image
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-semibold">More Coming Soon</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -1,3 +1,18 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+.matterport-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.matterport-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+}
