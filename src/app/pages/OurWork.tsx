@@ -58,7 +58,6 @@ export function OurWork() {
                   <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
                   <div className="p-5">
                     <h3 className="text-xl font-semibold">{project.name}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Project description coming soon.</p>
                   </div>
                 </a>
               ) : (
@@ -66,7 +65,6 @@ export function OurWork() {
                   <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
                   <div className="p-5">
                     <h3 className="text-xl font-semibold">{project.name}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Project description coming soon.</p>
                   </div>
                 </>
               )}
