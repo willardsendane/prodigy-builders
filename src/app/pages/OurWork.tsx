@@ -11,7 +11,7 @@ const customHomes = [
 export function OurWork() {
   return (
     <main className="bg-background">
-      <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
+      <section className="w-full pb-16 pt-28">
         <div className="relative overflow-hidden rounded-xl">
           <img
             src="/images/Moms_V1.png"
@@ -19,7 +19,7 @@ export function OurWork() {
             className="h-[500px] w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:p-10">
+          <div className="absolute bottom-0 left-0 right-0 px-6 py-6 lg:px-12 lg:py-10">
             <span
               className="inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
               style={{ backgroundColor: '#C9A84C' }}
@@ -48,9 +48,9 @@ export function OurWork() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight">Custom Homes</h2>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <section className="w-full py-16">
+        <h2 className="px-6 text-3xl font-bold tracking-tight lg:px-12">Custom Homes</h2>
+        <div className="mt-8 grid grid-cols-1 gap-6 px-6 md:grid-cols-2 lg:px-12 xl:grid-cols-3">
           {customHomes.map((project) => (
             <article key={project.name} className="overflow-hidden rounded-xl border border-border bg-card">
               {project.href ? (
@@ -73,19 +73,21 @@ export function OurWork() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <section className="w-full py-16">
         <div className="h-px w-full bg-border" />
-        <h2 className="mt-8 text-3xl font-bold tracking-tight">Currently Building</h2>
-        <span
-          className="mt-6 inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
-          style={{ backgroundColor: '#C9A84C' }}
-        >
-          Now Building
-        </span>
-        <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Port</h3>
-        <p className="mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
-          This build is currently underway. Explore the space in real time with our live 3D walkthrough below.
-        </p>
+        <div className="px-6 lg:px-12">
+          <h2 className="mt-8 text-3xl font-bold tracking-tight">Currently Building</h2>
+          <span
+            className="mt-6 inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
+            style={{ backgroundColor: '#C9A84C' }}
+          >
+            Now Building
+          </span>
+          <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Port</h3>
+          <p className="mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
+            This build is currently underway. Explore the space in real time with our live 3D walkthrough below.
+          </p>
+        </div>
         <div className="matterport-wrapper mt-6 rounded-xl border border-border">
           <iframe
             src="https://my.matterport.com/show/?m=f8WdXb5uWmq&brand=0&mls=1&mt=0&search=0&qs=1"
@@ -95,8 +97,8 @@ export function OurWork() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight">Government &amp; Commercial</h2>
+      <section className="w-full py-16">
+        <h2 className="px-6 text-3xl font-bold tracking-tight lg:px-12">Government &amp; Commercial</h2>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
           <article className="overflow-hidden rounded-xl border border-border bg-card">
             <img
