@@ -1,10 +1,10 @@
 const customHomes = [
-  { name: 'Alpine', imageUrl: '/images/Alpine_V1.png' },
-  { name: 'Cottonwood', imageUrl: '/images/Cottonwood_V1.png' },
-  { name: 'Foremaster', imageUrl: '/images/Foremaster_V1.png' },
+  { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.png' },
+  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png' },
+  { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/work/foremaster' },
   { name: 'Hideout', imageUrl: '/images/Hideout_V1.png' },
   { name: 'Holladay', imageUrl: '/images/Holladay_V1.png' },
-  { name: 'Hurricane', imageUrl: '/images/Hurricane_V1.png' },
+  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png' },
   { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png' },
 ];
 
@@ -53,31 +53,48 @@ export function OurWork() {
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {customHomes.map((project) => (
             <article key={project.name} className="overflow-hidden rounded-xl border border-border bg-card">
-              <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold">{project.name}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">Project description coming soon.</p>
-              </div>
+              {project.href ? (
+                <a href={project.href} className="block">
+                  <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
+                  <div className="p-5">
+                    <h3 className="text-xl font-semibold">{project.name}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Project description coming soon.</p>
+                  </div>
+                </a>
+              ) : (
+                <>
+                  <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
+                  <div className="p-5">
+                    <h3 className="text-xl font-semibold">{project.name}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Project description coming soon.</p>
+                  </div>
+                </>
+              )}
             </article>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <span className="inline-flex rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+        <div className="h-px w-full bg-border" />
+        <h2 className="mt-8 text-3xl font-bold tracking-tight">Currently Building</h2>
+        <span
+          className="mt-6 inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
+          style={{ backgroundColor: '#C9A84C' }}
+        >
           Now Building
         </span>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Rose Port</h2>
-        <iframe
-          src="https://my.matterport.com/show/?m=f8WdXb5uWmq&"
-          title="Rose Port Matterport walkthrough"
-          className="mt-6 w-full rounded-xl border border-border"
-          style={{ height: '500px' }}
-          allowFullScreen
-        />
-        <p className="mt-4 text-base text-muted-foreground">
-          Take a live 3D walkthrough of our latest build in progress.
+        <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Port</h3>
+        <p className="mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
+          This build is currently underway. Explore the space in real time with our live 3D walkthrough below.
         </p>
+        <div className="matterport-wrapper mt-6 rounded-xl border border-border">
+          <iframe
+            src="https://my.matterport.com/show/?m=f8WdXb5uWmq&brand=0&mls=1&mt=0&search=0&qs=1"
+            title="Rose Port Matterport walkthrough"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
