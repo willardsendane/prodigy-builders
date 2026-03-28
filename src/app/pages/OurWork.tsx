@@ -1,6 +1,6 @@
 const customHomes = [
   { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.png' },
-  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png' },
+  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png', href: '/work/cottonwood' },
   { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/work/foremaster' },
   { name: 'Hideout', imageUrl: '/images/Hideout_V1.png' },
   { name: 'Holladay', imageUrl: '/images/Holladay_V1.png' },

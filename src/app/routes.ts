@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { OurWork } from "./pages/OurWork";
 import { ProjectForemaster } from "./pages/ProjectForemaster";
+import { ProjectCottonwood } from "./pages/ProjectCottonwood";
 import { ClientDropbox } from "./pages/ClientDropbox";
 import { Contact } from "./pages/Contact";
 import { Layout } from "./components/Layout";
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { path: "about", Component: About },
       { path: "work", Component: OurWork },
       { path: "work/foremaster", Component: ProjectForemaster },
+      { path: "work/cottonwood", Component: ProjectCottonwood },
       { path: "dropbox", Component: ClientDropbox },
       { path: "contact", Component: Contact },
     ],
