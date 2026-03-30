@@ -1,22 +1,16 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
-/** Lightbox order: shower, stairs, kitchen, living room */
 const galleryImages = [
-  '/images/Cottonwood_V1.1.webp',
-  '/images/Cottonwood_V4.1.webp',
-  '/images/Cottonwood_V2.1.webp',
-  '/images/Cottonwood_V3.1.webp',
+  '/images/Alpine_V1.1.png',
+  '/images/Alpine_V2.1.png',
+  '/images/Alpine_V3.1.png',
+  '/images/Alpine_V4.1.png',
+  '/images/Alpine_V5.1.png',
+  '/images/Alpine_V6.png',
 ];
 
-const galleryAlts = [
-  'Cottonwood View shower',
-  'Cottonwood View stairs',
-  'Cottonwood View kitchen',
-  'Cottonwood View living room',
-];
-
-export function ProjectCottonwood() {
+export function ProjectAlpine() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const activeImage = useMemo(() => {
@@ -36,8 +30,7 @@ export function ProjectCottonwood() {
 
   return (
     <main className="bg-background text-foreground">
-      <section className="pb-16 pt-28">
-        <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
+      <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
         <Link
           to="/work"
           className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
@@ -49,14 +42,10 @@ export function ProjectCottonwood() {
         </Link>
 
         <div className="relative overflow-hidden rounded-xl">
-          <img
-            src="/images/Cottonwood_V5.3.webp"
-            alt="Cottonwood View hero"
-            className="h-[450px] w-full object-cover object-center"
-          />
+          <img src="/images/Alpine_V1.png" alt="Alpine Manor hero" className="h-[560px] w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <h1 className="absolute bottom-0 left-0 p-6 text-5xl font-bold tracking-tight text-white sm:p-8 sm:text-6xl">
-            Cottonwood View
+            Alpine Manor
           </h1>
         </div>
 
@@ -65,7 +54,7 @@ export function ProjectCottonwood() {
           <div className="px-4 py-5" style={{ backgroundColor: '#1a1a1a' }}>
             <div className="flex flex-wrap items-center justify-center gap-3 text-center text-xs font-semibold uppercase tracking-wider sm:text-sm">
               <span className="text-muted-foreground">
-                Location: <span className="text-white">Salt Lake County</span>
+                Location: <span className="text-white">Alpine, UT</span>
               </span>
               <span className="text-muted-foreground" aria-hidden="true">
                 |
@@ -84,23 +73,22 @@ export function ProjectCottonwood() {
           <div className="h-px w-full" style={{ backgroundColor: '#C9A84C' }} />
         </div>
 
-        <div className="mt-10 grid w-full grid-cols-3 gap-1">
+        <div className="mt-10 columns-1 gap-4 md:columns-2 lg:columns-3">
           {galleryImages.map((image, index) => (
             <button
               key={image}
               type="button"
-              className="block h-[220px] w-full overflow-hidden border-0 bg-transparent p-0 text-left"
+              className="mb-4 block w-full break-inside-avoid overflow-hidden rounded-xl border border-border bg-card text-left"
               onClick={() => setActiveIndex(index)}
             >
               <img
                 src={image}
-                alt={galleryAlts[index]}
+                alt={`Alpine Manor gallery image ${index + 1}`}
                 loading="lazy"
-                className="h-[220px] w-full object-cover transition-transform duration-300 hover:scale-[1.01]"
+                className="h-auto w-full object-cover transition-transform duration-300 hover:scale-[1.01]"
               />
             </button>
           ))}
-        </div>
         </div>
       </section>
 
@@ -147,7 +135,7 @@ export function ProjectCottonwood() {
           </button>
           <img
             src={activeImage}
-            alt="Cottonwood View lightbox preview"
+            alt="Alpine Manor lightbox preview"
             className="max-h-[90vh] max-w-[92vw] rounded-lg object-contain"
             onClick={(event) => event.stopPropagation()}
           />
