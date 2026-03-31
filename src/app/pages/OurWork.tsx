@@ -1,11 +1,13 @@
+import { Link } from 'react-router';
+
 const customHomes = [
-  { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.png' },
-  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png' },
+  { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.png', href: '/work/alpine' },
+  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png', href: '/work/cottonwood' },
   { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/work/foremaster' },
-  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png' },
-  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png' },
-  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png' },
-  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png' },
+  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png', href: '/work/hideout' },
+  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png', href: '/work/holladay' },
+  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png', href: '/work/hurricane' },
+  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png', href: '/work/traverse' },
 ];
 
 export function OurWork() {
@@ -52,23 +54,21 @@ export function OurWork() {
         <h2 className="px-6 text-3xl font-bold tracking-tight lg:px-12">Custom Homes</h2>
         <div className="mt-8 grid grid-cols-1 gap-6 px-6 md:grid-cols-2 lg:px-12 xl:grid-cols-3">
           {customHomes.map((project) => (
-            <article key={project.name} className="overflow-hidden rounded-xl border border-border bg-card">
-              {project.href ? (
-                <a href={project.href} className="block">
-                  <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
-                  <div className="p-5">
-                    <h3 className="text-xl font-semibold">{project.name}</h3>
-                  </div>
-                </a>
-              ) : (
-                <>
-                  <img src={project.imageUrl} alt={`${project.name} project`} className="h-56 w-full object-cover" />
-                  <div className="p-5">
-                    <h3 className="text-xl font-semibold">{project.name}</h3>
-                  </div>
-                </>
-              )}
-            </article>
+            <Link
+              key={project.name}
+              to={project.href}
+              className="relative z-10 block cursor-pointer overflow-hidden rounded-xl border border-border bg-card text-inherit no-underline transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              <img
+                src={project.imageUrl}
+                alt={`${project.name} project`}
+                draggable={false}
+                className="pointer-events-none h-56 w-full select-none object-cover"
+              />
+              <div className="p-5">
+                <h3 className="text-xl font-semibold">{project.name}</h3>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
