@@ -21,7 +21,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                 <ImageWithFallback
                   src={testimonial.homeImageUrl}
                   alt={`Home for ${testimonial.clientName}`}
-                  className="absolute inset-0 h-full w-full object-cover object-center"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <blockquote className="space-y-6">

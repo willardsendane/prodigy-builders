@@ -21,11 +21,11 @@ export function PortfolioTeaser({ projects }: PortfolioTeaserProps) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           {projects.map((project, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="relative mb-6 aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] mb-6 overflow-hidden">
                 <ImageWithFallback
                   src={project.imageUrl}
                   alt={project.name}
-                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
               </div>

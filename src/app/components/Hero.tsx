@@ -9,11 +9,11 @@ export function Hero({ imageUrl }: HeroProps) {
   return (
     <section className="relative h-screen w-full flex items-center justify-center">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0">
         <ImageWithFallback
           src={imageUrl}
           alt="Luxury custom home"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
