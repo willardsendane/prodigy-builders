@@ -20,29 +20,29 @@ export function CoreValues() {
   ];
 
   return (
-    <section className="bg-[#0f0f0f] py-32">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className="min-w-0 overflow-x-hidden bg-[#0f0f0f] py-32">
+      <div className="container mx-auto min-w-0 max-w-full px-6 lg:px-12">
         {/* Decorative line above section label */}
         <div className="w-24 h-px bg-accent/30 mx-auto mb-8"></div>
         
         <p className="text-accent text-sm tracking-[0.3em] mb-8 text-center">OUR VALUES</p>
         
         <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-wider mb-20 text-center text-foreground" style={{ fontWeight: 900 }}>
-          A Single Standard. For Every Client.
+          Built Like It&apos;s Our Own.
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div className="grid min-w-0 grid-cols-1 gap-16 md:grid-cols-3">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
-              <div key={index} className="text-center">
+              <div key={index} className="min-w-0 text-center">
                 <div className="mb-6 flex justify-center">
-                  <Icon className="w-12 h-12 text-accent" strokeWidth={1} />
+                  <Icon className="h-12 w-12 shrink-0 text-accent" strokeWidth={1} />
                 </div>
-                <h3 className="text-2xl tracking-wider mb-4 text-foreground" style={{ fontWeight: 600 }}>
+                <h3 className="mb-4 break-words text-2xl tracking-wider text-foreground" style={{ fontWeight: 600 }}>
                   {value.title}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed">
+                <p className="break-words leading-relaxed text-foreground/70">
                   {value.description}
                 </p>
               </div>

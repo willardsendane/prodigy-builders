@@ -1,30 +1,25 @@
-import { ImageWithFallback } from '../figma/ImageWithFallback';
-
 export function DropboxHero() {
   return (
-    <section className="relative h-[60vh] w-full flex items-center justify-center">
-      {/* Background Image with Overlay */}
+    <section className="relative flex min-h-[65vh] w-full items-center justify-center overflow-hidden bg-[#0a0a0a] pb-16 pt-24">
       <div className="absolute inset-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmUlMjBibHVlcHJpbnRzJTIwZG9jdW1lbnRzfGVufDF8fHx8MTc3MTk3ODExNnww&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Construction documents and blueprints"
-          className="w-full h-full object-cover"
+        <img
+          src="/images/DropboxHero.png"
+          alt=""
+          className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.55)' }} aria-hidden />
       </div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="text-xs md:text-sm tracking-[0.3em] text-foreground/70 mb-6">
-          CLIENT PORTAL
+
+      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center justify-center px-6 text-center">
+        <p className="mb-4 text-lg uppercase tracking-[0.28em] text-[#C9A84C]">
+          Secure client document portal
         </p>
-        <h1 className="tracking-wide mb-6 text-[3.375rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
-          Secure Document <br />
-          <span style={{ color: '#c9a961' }}>Access.</span>
+        <h1
+          className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
+          style={{ fontWeight: 900, lineHeight: 1.15 }}
+        >
+          Drop. Share. Done.
         </h1>
-        <p className="text-[0.9rem] md:text-xl text-foreground/80 max-w-2xl mx-auto tracking-wide">
-          Upload, download, and manage project documents in one secure location.
-        </p>
       </div>
     </section>
   );

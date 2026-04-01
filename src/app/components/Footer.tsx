@@ -1,64 +1,45 @@
-import { Instagram, Facebook, Linkedin } from 'lucide-react';
-import { Link } from 'react-router';
+import { Instagram } from 'lucide-react';
+
+const INSTAGRAM_URL =
+  'https://www.instagram.com/prodigy_construction_ut?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==';
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/5 py-16">
+    <footer className="border-t border-[#C9A84C]/30 bg-[#0d0d0d]">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-          {/* Logo */}
-          <div className="text-center md:text-left">
-            <div className="text-lg tracking-wider text-foreground">
-              PRODIGY BUILDERS
-            </div>
-          </div>
-          
-          {/* Navigation Links */}
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-center">
-            <a href="#work" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
-              Work
-            </a>
-            <a href="#process" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
-              Process
-            </a>
-            <Link to="/about" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
-              Contact
-            </Link>
-          </div>
-          
-          {/* Contact & Social */}
-          <div className="text-center md:text-right space-y-4">
-            <p className="text-sm text-foreground/70">
-              2795 Rolling Knolls Drive<br />
-              Provo, UT 84604
+        <div className="flex flex-col items-stretch justify-between gap-10 py-12 md:flex-row md:items-center">
+          <div className="max-w-md">
+            <p className="text-lg font-bold uppercase tracking-[0.2em] text-white">PRODIGY BUILDERS</p>
+            <p className="mt-3 text-sm leading-relaxed text-gray-500">
+              Designed to turn heads. Built to stand for generations.
             </p>
-            <p className="text-sm text-foreground/70">
+          </div>
+
+          <div className="flex w-full flex-col items-end gap-3 text-right md:ml-auto md:w-auto">
+            <p className="text-sm text-gray-400">2795 Rolling Knolls Drive, Provo, UT 84604</p>
+            <a
+              href="mailto:thatcher@prodigybuilders.net"
+              className="text-sm text-gray-400 transition-colors hover:text-white"
+            >
               thatcher@prodigybuilders.net
-            </p>
-            <p className="text-sm text-foreground/70">
+            </a>
+            <a href="tel:8016696228" className="text-sm text-gray-400 transition-colors hover:text-white">
               (801)669-6228
-            </p>
-            <div className="flex items-center gap-4 justify-center md:justify-end">
-              <a href="#" className="text-foreground/70 hover:text-accent transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-foreground/70 hover:text-accent transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-foreground/70 hover:text-accent transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 inline-flex text-gray-400 transition-colors hover:text-[#C9A84C]"
+              aria-label="Prodigy Builders on Instagram"
+            >
+              <Instagram className="h-6 w-6" strokeWidth={1.5} />
+            </a>
           </div>
         </div>
-        
-        <div className="mt-16 pt-8 border-t border-white/5 text-center">
-          <p className="text-xs text-foreground/50 tracking-wider">
-            © 2026 Prodigy Builders. All rights reserved.
-          </p>
+
+        <div className="border-t border-white/5 py-8 text-center">
+          <p className="text-xs tracking-wider text-gray-500">© 2026 Prodigy Builders. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,42 +1,40 @@
 import { Link } from 'react-router';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
-interface HeroProps {
-  imageUrl: string;
-}
-
-export function Hero({ imageUrl }: HeroProps) {
+export function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center">
-      {/* Background Image with Overlay */}
+    <section className="relative flex h-screen w-full items-center justify-center">
       <div className="absolute inset-0">
-        <ImageWithFallback
-          src={imageUrl}
-          alt="Luxury custom home"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0"
+          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+        >
+          <source src="/Hero5.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} aria-hidden />
       </div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="tracking-wide mb-6 text-[3.375rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px]" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+
+      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+        <h1
+          className="mb-6 text-[3.375rem] tracking-wide sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px]"
+          style={{ fontWeight: 900, lineHeight: 1.1 }}
+        >
           Built at Any Scale.
         </h1>
-        <p className="text-[0.9rem] md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto tracking-wide">
-        The craftsmanship of a custom builder with the proven capability of a commercial contractor.
+        <p className="mb-12 max-w-2xl mx-auto text-[0.9rem] tracking-wide text-foreground/80 md:text-xl">
+          The craftsmanship of a custom builder with the proven capability of a commercial contractor.
         </p>
         <div className="flex flex-col items-center gap-3">
           <Link
             to="/contact"
-            className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm inline-block"
+            className="inline-block rounded-none border-2 border-transparent bg-[#C9A84C] px-10 py-4 text-sm font-bold uppercase tracking-wider text-[#1a1a1a] transition-all duration-200 hover:bg-transparent hover:border-[#C9A84C] hover:text-[#C9A84C]"
           >
             START YOUR BUILD
           </Link>
-          <Link
-            to="/work"
-            className="text-sm text-accent hover:text-accent-foreground transition-colors"
-          >
+          <Link to="/work" className="text-sm text-accent transition-colors hover:text-accent-foreground">
             View Our Work
           </Link>
         </div>

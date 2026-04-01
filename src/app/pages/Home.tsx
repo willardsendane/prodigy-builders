@@ -5,13 +5,11 @@ import { ProdigyDifference } from '../components/ProdigyDifference';
 import { ProcessTeaser } from '../components/ProcessTeaser';
 import { Testimonials } from '../components/Testimonials';
 import { FooterCTA } from '../components/FooterCTA';
-import heroImage from '../../assets/hero.png';
-
 
 export function Home() {
   return (
     <>
-      <Hero imageUrl={heroImage} />
+      <Hero />
       <CredibilityBar />
       <PortfolioTeaser />
       <ProdigyDifference />
