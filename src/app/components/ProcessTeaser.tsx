@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function ProcessTeaser() {
   const steps = [
@@ -20,23 +21,23 @@ export function ProcessTeaser() {
   ];
 
   return (
-    <section id="process" className="bg-[#f8f8f6] py-32">
+    <section id="process" className="bg-[#1a1a1a] py-32">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 text-center text-[#0a0a0a] tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 text-center text-white tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
             Our Process.
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {steps.map((step, index) => (
               <div key={index} className="text-center md:text-left">
-                <div className="text-6xl mb-6 text-[#c9a961]/30 font-['Blair_ITC']" style={{ fontWeight: 700, lineHeight: 1 }}>
+                <div className="text-6xl mb-6 text-[#C9A84C] font-['Blair_ITC']" style={{ fontWeight: 700, lineHeight: 1 }}>
                   {step.number}
                 </div>
-                <h3 className="text-2xl mb-4 text-[#0a0a0a] tracking-wide font-['Blair_ITC']" style={{ fontWeight: 600 }}>
+                <h3 className="text-2xl mb-4 text-white tracking-wide font-['Blair_ITC']" style={{ fontWeight: 600 }}>
                   {step.title}
                 </h3>
-                <p className="text-[#0a0a0a]/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -44,13 +45,13 @@ export function ProcessTeaser() {
           </div>
           
           <div className="text-center">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-sm text-[#c9a961] hover:gap-3 transition-all duration-300 tracking-wide"
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-sm text-[#C9A84C] hover:gap-3 transition-all duration-300 tracking-wide"
             >
-              See Our Full Process
+              Build with Us
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
