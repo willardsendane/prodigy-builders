@@ -28,7 +28,7 @@ export function Testimonials() {
               className="bg-[#1a1a1a] border border-white/10 p-8 md:p-10 flex flex-col"
             >
               <span
-                className="font-serif text-5xl md:text-6xl leading-none mb-5 select-none text-[#C9A84C]"
+                className="font-sans text-5xl md:text-6xl leading-none mb-5 select-none font-light text-[#C9A84C]"
                 aria-hidden
               >
                 “

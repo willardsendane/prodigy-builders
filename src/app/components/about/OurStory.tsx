@@ -9,7 +9,7 @@ export function OurStory() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Text Content */}
           <div>
-            <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-wider mb-8 text-foreground font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+            <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-wider mb-8 text-foreground" style={{ fontWeight: 900 }}>
               From One Crew to a Legacy.
             </h2>
             <p className="text-foreground/80 leading-relaxed text-[0.9rem] md:text-lg">

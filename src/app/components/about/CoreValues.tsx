@@ -27,7 +27,7 @@ export function CoreValues() {
         
         <p className="text-accent text-sm tracking-[0.3em] mb-8 text-center">OUR VALUES</p>
         
-        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-wider mb-20 text-center text-foreground font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-wider mb-20 text-center text-foreground" style={{ fontWeight: 900 }}>
           A Single Standard. For Every Client.
         </h2>
         
@@ -39,7 +39,7 @@ export function CoreValues() {
                 <div className="mb-6 flex justify-center">
                   <Icon className="w-12 h-12 text-accent" strokeWidth={1} />
                 </div>
-                <h3 className="text-2xl tracking-wider mb-4 text-foreground font-['Blair_ITC']" style={{ fontWeight: 600 }}>
+                <h3 className="text-2xl tracking-wider mb-4 text-foreground" style={{ fontWeight: 600 }}>
                   {value.title}
                 </h3>
                 <p className="text-foreground/70 leading-relaxed">

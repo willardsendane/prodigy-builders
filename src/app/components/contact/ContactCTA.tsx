@@ -2,7 +2,7 @@ export function ContactCTA() {
   return (
     <section className="bg-[#0a0a0a] py-20 border-b border-white/5">
       <div className="container mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-8 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-8 tracking-tight" style={{ fontWeight: 900 }}>
           Prefer to reach out directly?
         </h2>
         <p className="text-[0.9rem] md:text-lg text-foreground/80 mb-8 max-w-xl mx-auto tracking-wide">

@@ -29,7 +29,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               
               {/* Project Details */}
               <div className="space-y-3">
-                <h3 className="text-2xl md:text-3xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+                <h3 className="text-2xl md:text-3xl tracking-tight" style={{ fontWeight: 900 }}>
                   {project.name}
                 </h3>
                 <p className="text-xs tracking-[0.2em] text-accent">

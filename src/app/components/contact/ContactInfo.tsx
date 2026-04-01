@@ -9,7 +9,7 @@ export function ContactInfo() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30">
               <MapPin className="w-7 h-7 text-accent" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-lg tracking-tight" style={{ fontWeight: 900 }}>
               Office
             </h3>
             <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -22,7 +22,7 @@ export function ContactInfo() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30">
               <Phone className="w-7 h-7 text-accent" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-lg tracking-tight" style={{ fontWeight: 900 }}>
               Phone
             </h3>
             <a
@@ -37,7 +37,7 @@ export function ContactInfo() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30">
               <Mail className="w-7 h-7 text-accent" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-lg tracking-tight" style={{ fontWeight: 900 }}>
               Email
             </h3>
             <a

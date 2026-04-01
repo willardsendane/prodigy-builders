@@ -25,7 +25,7 @@ export function FeaturedProject() {
           {/* Right: Details */}
           <div className="lg:col-span-2 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+              <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl tracking-tight" style={{ fontWeight: 900 }}>
                 The Highlands Estate
               </h2>
               <p className="text-xs tracking-[0.2em] text-accent">

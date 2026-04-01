@@ -15,7 +15,7 @@ export function AboutHero() {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
-        <h1 className="tracking-wide font-['Blair_ITC'] text-[3.375rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px] mb-6" style={{ fontWeight: 900, lineHeight: 1.1 }}>
+        <h1 className="tracking-wide text-[3.375rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px] mb-6" style={{ fontWeight: 900, lineHeight: 1.1 }}>
           Intentionally Designed.<br /><span style={{ color: '#c9a84c' }}>Meticulously Built.</span>
         </h1>
         <p className="text-[0.9rem] md:text-xl text-foreground/80 max-w-2xl mx-auto tracking-wide">

@@ -24,17 +24,17 @@ export function ProcessTeaser() {
     <section id="process" className="bg-[#1a1a1a] py-32">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 text-center text-white tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 text-center text-white tracking-tight" style={{ fontWeight: 900 }}>
             Our Process.
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {steps.map((step, index) => (
               <div key={index} className="text-center md:text-left">
-                <div className="text-6xl mb-6 text-[#C9A84C] font-['Blair_ITC']" style={{ fontWeight: 700, lineHeight: 1 }}>
+                <div className="font-heading text-6xl mb-6 text-[#C9A84C]" style={{ fontWeight: 700, lineHeight: 1 }}>
                   {step.number}
                 </div>
-                <h3 className="text-2xl mb-4 text-white tracking-wide font-['Blair_ITC']" style={{ fontWeight: 600 }}>
+                <h3 className="text-2xl mb-4 text-white tracking-wide" style={{ fontWeight: 600 }}>
                   {step.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">

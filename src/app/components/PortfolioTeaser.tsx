@@ -7,7 +7,7 @@ export function PortfolioTeaser() {
   return (
     <section id="work" className="bg-background py-32">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 tracking-tight" style={{ fontWeight: 900 }}>
           Our Work.
         </h2>
 
@@ -23,7 +23,7 @@ export function PortfolioTeaser() {
               <p className={`text-xs md:text-sm uppercase tracking-[0.2em] ${goldClass} mb-3 font-medium`}>
                 Featured Project
               </p>
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 700 }}>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 tracking-tight" style={{ fontWeight: 700 }}>
                 Berkshire Villa
               </h3>
               <p className="text-sm md:text-base text-white/70 max-w-xl mb-6 tracking-wide">
@@ -45,7 +45,7 @@ export function PortfolioTeaser() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl text-white mb-3 tracking-wide font-['Blair_ITC']" style={{ fontWeight: 600 }}>
+              <h3 className="text-xl md:text-2xl text-white mb-3 tracking-wide" style={{ fontWeight: 600 }}>
                 Foremaster Ridge
               </h3>
               <span className={`inline-flex items-center gap-2 text-sm ${goldClass} group-hover:gap-3 transition-all duration-300 tracking-wide`}>
@@ -62,7 +62,7 @@ export function PortfolioTeaser() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl text-white mb-3 tracking-wide font-['Blair_ITC']" style={{ fontWeight: 600 }}>
+              <h3 className="text-xl md:text-2xl text-white mb-3 tracking-wide" style={{ fontWeight: 600 }}>
                 Hideout
               </h3>
               <span className={`inline-flex items-center gap-2 text-sm ${goldClass} group-hover:gap-3 transition-all duration-300 tracking-wide`}>

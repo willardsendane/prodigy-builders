@@ -9,7 +9,7 @@ export function DropboxContent() {
           <p className="text-xs md:text-sm tracking-[0.3em] text-foreground/70 mb-6">
             SECURE & ORGANIZED
           </p>
-          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-8 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+          <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-8 tracking-tight" style={{ fontWeight: 900 }}>
             Your Project Documents,<br />
             <span style={{ color: '#c9a961' }}>Always Accessible.</span>
           </h2>
@@ -25,7 +25,7 @@ export function DropboxContent() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30 mb-4">
               <Upload className="w-7 h-7 text-accent" />
             </div>
-            <h3 className="text-xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-xl tracking-tight" style={{ fontWeight: 900 }}>
               Easy Upload
             </h3>
             <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -37,7 +37,7 @@ export function DropboxContent() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30 mb-4">
               <Lock className="w-7 h-7 text-accent" />
             </div>
-            <h3 className="text-xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-xl tracking-tight" style={{ fontWeight: 900 }}>
               Secure Storage
             </h3>
             <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -49,7 +49,7 @@ export function DropboxContent() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30 mb-4">
               <FolderOpen className="w-7 h-7 text-accent" />
             </div>
-            <h3 className="text-xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-xl tracking-tight" style={{ fontWeight: 900 }}>
               Organized Access
             </h3>
             <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -61,7 +61,7 @@ export function DropboxContent() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full border border-accent/30 mb-4">
               <FileText className="w-7 h-7 text-accent" />
             </div>
-            <h3 className="text-xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+            <h3 className="text-xl tracking-tight" style={{ fontWeight: 900 }}>
               Version Control
             </h3>
             <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -78,7 +78,7 @@ export function DropboxContent() {
             </div>
             
             <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-['Blair_ITC'] tracking-tight" style={{ fontWeight: 900 }}>
+              <h3 className="text-2xl md:text-3xl tracking-tight" style={{ fontWeight: 900 }}>
                 Document Upload Area
               </h3>
               <p className="text-foreground/70 tracking-wide max-w-xl mx-auto">
@@ -105,10 +105,10 @@ export function DropboxContent() {
           <div className="space-y-6">
             <div className="flex gap-6 items-start">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-                <span className="text-accent font-['Blair_ITC']" style={{ fontWeight: 900 }}>1</span>
+                <span className="text-accent font-sans font-black">1</span>
               </div>
               <div>
-                <h4 className="text-lg font-['Blair_ITC'] mb-2" style={{ fontWeight: 900 }}>
+                <h4 className="text-lg mb-2 font-sans font-bold">
                   Log In Securely
                 </h4>
                 <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -119,10 +119,10 @@ export function DropboxContent() {
 
             <div className="flex gap-6 items-start">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-                <span className="text-accent font-['Blair_ITC']" style={{ fontWeight: 900 }}>2</span>
+                <span className="text-accent font-sans font-black">2</span>
               </div>
               <div>
-                <h4 className="text-lg font-['Blair_ITC'] mb-2" style={{ fontWeight: 900 }}>
+                <h4 className="text-lg mb-2 font-sans font-bold">
                   Browse or Upload
                 </h4>
                 <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
@@ -133,10 +133,10 @@ export function DropboxContent() {
 
             <div className="flex gap-6 items-start">
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-                <span className="text-accent font-['Blair_ITC']" style={{ fontWeight: 900 }}>3</span>
+                <span className="text-accent font-sans font-black">3</span>
               </div>
               <div>
-                <h4 className="text-lg font-['Blair_ITC'] mb-2" style={{ fontWeight: 900 }}>
+                <h4 className="text-lg mb-2 font-sans font-bold">
                   Stay Updated
                 </h4>
                 <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">

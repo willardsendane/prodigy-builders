@@ -4,7 +4,7 @@ export function FooterCTA() {
   return (
     <section id="contact" className="bg-[#0a0a0a] py-32 border-t border-white/5">
       <div className="container mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-12 tracking-tight font-['Blair_ITC']" style={{ fontWeight: 900 }}>
+        <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-12 tracking-tight" style={{ fontWeight: 900 }}>
           Ready to build something extraordinary?
         </h2>
         <Link
