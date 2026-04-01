@@ -9,21 +9,6 @@ import heroImage from '../../assets/hero.png';
 
 
 export function Home() {
-  const projects = [
-    {
-      name: "The Highlands Estate",
-      imageUrl: "https://images.unsplash.com/photo-1766848834880-59e1632d92a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBjdXN0b20lMjBob21lJTIwZXh0ZXJpb3J8ZW58MXx8fHwxNzcxNDUyNDUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-    },
-    {
-      name: "Riverside Modern",
-      imageUrl: "https://images.unsplash.com/photo-1758448756880-01dbaf85597d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBsdXh1cnklMjBob21lJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3MTQ1MjQ1Mnww&ixlib=rb-4.1.0&q=80&w=1080"
-    },
-    {
-      name: "The Summit Residence",
-      imageUrl: "https://images.unsplash.com/photo-1733062267300-199458eb60dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwbHV4dXJ5JTIwaG91c2UlMjBkdXNrfGVufDF8fHx8MTc3MTQ1MjQ1MXww&ixlib=rb-4.1.0&q=80&w=1080"
-    }
-  ];
-
   const testimonials = [
     {
       quote: "Prodigy Builders transformed our vision into a masterpiece that exceeds every expectation. Their attention to detail is unparalleled.",
@@ -41,7 +26,7 @@ export function Home() {
     <>
       <Hero imageUrl={heroImage} />
       <CredibilityBar />
-      <PortfolioTeaser projects={projects} />
+      <PortfolioTeaser />
       <ProdigyDifference />
       <ProcessTeaser />
       <Testimonials testimonials={testimonials} />

@@ -20,26 +20,44 @@ export function OurWork() {
             alt="Berkshire Villa featured build hero"
             className="h-[500px] w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 px-6 py-6 lg:px-12 lg:py-10">
-            <span
-              className="inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
-              style={{ backgroundColor: '#C9A84C' }}
-            >
-              Utah Home Show Featured Build
-            </span>
+          <div
+            className="pointer-events-none absolute inset-0 z-[1]"
+            style={{ backgroundColor: 'rgba(0,0,0,0.55)' }}
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 z-[1]"
+            style={{
+              background: 'linear-gradient(to top, rgba(0,0,0,0.92), transparent)',
+            }}
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 z-[1]"
+            style={{
+              background: 'linear-gradient(to right, rgba(0,0,0,0.3), transparent)',
+            }}
+            aria-hidden
+          />
+          <div className="absolute bottom-0 left-0 right-0 z-10 px-6 py-6 lg:px-12 lg:py-10">
+            <p className="text-xs font-medium uppercase tracking-widest text-[#C9A84C] sm:text-sm">FEATURED PROJECT</p>
             <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
               Berkshire Villa
             </h1>
-            <p className="mt-3 max-w-3xl text-base text-white/90 sm:text-lg">
-              As seen at the Utah Home Show, one of Utah&apos;s most celebrated custom builds.
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75 sm:text-base">
+              Designed to turn heads. Built to stand for generations.
             </p>
-            <div className="mt-5 h-[3px] w-[220px]" style={{ backgroundColor: '#C9A84C' }} />
           </div>
         </div>
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <img src="/images/Moms_V3.png" alt="Berkshire Villa exterior angle two" className="h-[420px] w-full rounded-xl object-cover" />
-          <img src="/images/Moms_V4.png" alt="Berkshire Villa exterior angle three" className="h-[420px] w-full rounded-xl object-cover" />
+        <div className="w-full px-6 py-8 lg:px-12">
+          <div className="h-px w-full" style={{ backgroundColor: 'rgba(201, 168, 76, 0.4)' }} aria-hidden />
+        </div>
+        <div className="bg-[#0a0a0a] px-6 pb-8 lg:px-12 lg:pb-10">
+          <p className="text-xs font-medium uppercase tracking-widest text-[#C9A84C] sm:text-sm">EXTERIOR GALLERY</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <img src="/images/Moms_V3.png" alt="Berkshire Villa exterior angle two" className="h-[420px] w-full rounded-xl object-cover" />
+            <img src="/images/Moms_V4.png" alt="Berkshire Villa exterior angle three" className="h-[420px] w-full rounded-xl object-cover" />
+          </div>
         </div>
         <div className="matterport-wrapper mt-6 rounded-xl border border-border">
           <iframe
@@ -75,25 +93,28 @@ export function OurWork() {
 
       <section className="w-full py-16">
         <div className="h-px w-full bg-border" />
-        <div className="px-6 lg:px-12">
-          <h2 className="mt-8 text-3xl font-bold tracking-tight">Currently Building</h2>
-          <span
-            className="mt-6 inline-flex rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
-            style={{ backgroundColor: '#C9A84C' }}
-          >
-            Now Building
-          </span>
-          <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Port</h3>
-          <p className="mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
-            This build is currently underway. Explore the space in real time with our live 3D walkthrough below.
-          </p>
-        </div>
-        <div className="matterport-wrapper mt-6 rounded-xl border border-border">
-          <iframe
-            src="https://my.matterport.com/show/?m=f8WdXb5uWmq&brand=0&mls=1&mt=0&search=0&qs=1"
-            title="Rose Port Matterport walkthrough"
-            allowFullScreen
-          />
+        <div className="mt-8 grid grid-cols-1 items-center gap-8 px-6 lg:grid-cols-[2fr_3fr] lg:px-12">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl font-bold tracking-tight">Currently Building</h2>
+            <span
+              className="mt-6 inline-flex w-fit rounded-full px-4 py-2 text-sm font-bold uppercase tracking-wide text-black"
+              style={{ backgroundColor: '#C9A84C' }}
+            >
+              Now Building
+            </span>
+            <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Port</h3>
+            <p className="mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
+              This build is currently underway. Explore the space in real time with our live 3D walkthrough below.
+            </p>
+          </div>
+          <div className="min-w-0">
+            <iframe
+              src="https://my.matterport.com/show/?m=f8WdXb5uWmq&brand=0&mls=1&mt=0&search=0&qs=1"
+              title="Rose Port Matterport walkthrough"
+              className="block h-[400px] w-full rounded-xl border border-border"
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
 
