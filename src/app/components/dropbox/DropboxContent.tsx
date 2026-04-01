@@ -61,7 +61,7 @@ export function DropboxContent() {
 
         {/* Placeholder for Future Dropbox Functionality */}
         <div className="max-w-4xl mx-auto">
-          <div className="border-2 border-dashed border-white/10 rounded-lg p-16 text-center space-y-8">
+          <div className="rounded-lg border-2 border-dashed border-white/10 bg-[#141410] p-16 text-center space-y-8">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/10 border border-accent/30">
               <Upload className="w-10 h-10 text-accent" />
             </div>
@@ -101,7 +101,7 @@ export function DropboxContent() {
                   Log In Securely
                 </h4>
                 <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
-                  Access your personalized portal with your unique credentials provided by your project manager.
+                  Your project manager sends you a private login link. No account setup needed.
                 </p>
               </div>
             </div>
@@ -112,10 +112,10 @@ export function DropboxContent() {
               </div>
               <div>
                 <h4 className="text-lg mb-2 font-sans font-bold">
-                  Browse or Upload
+                  View Your Documents
                 </h4>
                 <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
-                  View existing project documents or upload new files like design selections, permits, or updated plans.
+                  Browse contracts, plans, permits, and progress photos organized by your project.
                 </p>
               </div>
             </div>
@@ -126,10 +126,10 @@ export function DropboxContent() {
               </div>
               <div>
                 <h4 className="text-lg mb-2 font-sans font-bold">
-                  Stay Updated
+                  Download Anytime
                 </h4>
                 <p className="text-sm text-foreground/70 tracking-wide leading-relaxed">
-                  Receive notifications when new documents are added and track your project's progress in real-time.
+                  Save what you need, whenever you need it. Everything stays current as your build progresses.
                 </p>
               </div>
             </div>

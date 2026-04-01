@@ -1,11 +1,12 @@
 export function DropboxHero() {
   return (
     <section className="relative flex min-h-[65vh] w-full items-center justify-center overflow-hidden bg-[#0a0a0a] pb-16 pt-24">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/images/DropboxHero.png"
+          src="/images/Dropbox3.png"
           alt=""
-          className="h-full w-full object-cover"
+          className="absolute left-1/2 top-1/2 min-h-full min-w-full object-cover object-center"
+          style={{ transform: 'translate(-50%, -50%) scale(1.2)' }}
         />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.55)' }} aria-hidden />
       </div>
