@@ -7,6 +7,7 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/work', label: 'Work' },
   { to: '/about', label: 'About' },
+  { to: '/meet-our-founder', label: 'Our Founder' },
   { to: '/dropbox', label: 'Client Dropbox' },
   { to: '/contact', label: 'Contact' },
 ];

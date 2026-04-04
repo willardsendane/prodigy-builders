@@ -19,9 +19,10 @@ export function MeetTheTeam() {
               Thatcher Lamb
             </h2>
             <p className="mt-6 max-w-xl break-words text-base leading-relaxed text-gray-400 sm:text-lg">
-              Thatcher founded Prodigy Builders with a simple belief — that every family deserves a home built with
-              the same care and precision as the finest custom builds in the country. What started as a single crew has
-              grown into one of Utah&apos;s most trusted builders, from custom homes to government contracts.
+              Thatcher founded Prodigy Construction with a simple belief — that every family deserves a home built with
+              the same care and precision as the finest custom builds in the country. What started as a 14 year old boy
+              running a framing crew for his dad&apos;s company has grown into one of Utah&apos;s most trusted builders,
+              from custom homes to government contracts.
             </p>
             <hr className="mt-8 max-w-xl border-0 border-t border-[#C9A84C]" />
             <p className="mt-6 text-sm tracking-wide text-gray-400 sm:text-base">Builder. Father. Founder.</p>

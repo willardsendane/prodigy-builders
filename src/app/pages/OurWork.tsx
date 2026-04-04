@@ -55,11 +55,19 @@ export function OurWork() {
         <div className="bg-[#0a0a0a] px-6 pb-8 lg:px-12 lg:pb-10">
           <p className="text-xs font-medium uppercase tracking-widest text-[#C9A84C] sm:text-sm">EXTERIOR GALLERY</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <img src="/images/Moms_V3.png" alt="Berkshire Villa exterior angle two" className="h-[420px] w-full rounded-xl object-cover" />
-            <img src="/images/Moms_V4.png" alt="Berkshire Villa exterior angle three" className="h-[420px] w-full rounded-xl object-cover" />
+            <img
+              src="/images/Moms_V3.png"
+              alt="Berkshire Villa exterior angle two"
+              className="h-auto w-full rounded-xl sm:h-[420px] sm:object-cover"
+            />
+            <img
+              src="/images/Moms_V4.png"
+              alt="Berkshire Villa exterior angle three"
+              className="h-auto w-full rounded-xl sm:h-[420px] sm:object-cover"
+            />
           </div>
         </div>
-        <div className="matterport-wrapper mt-6 rounded-xl border border-border">
+        <div className="matterport-wrapper mx-auto mt-6 w-[80%] max-w-full rounded-xl border border-border">
           <iframe
             src="https://my.matterport.com/show/?m=phQb9AB4iYo&brand=0&mls=1&mt=0&search=0&qs=1"
             title="Berkshire Villa Matterport walkthrough"
@@ -102,15 +110,15 @@ export function OurWork() {
             >
               Now Building
             </span>
-            <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Port</h3>
+            <h3 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl">Rose Canyon</h3>
             <p className="mt-4 max-w-3xl text-base text-muted-foreground sm:text-lg">
-              This build is currently underway. Explore the space in real time with our live 3D walkthrough below.
+              This build is currently underway. Explore the space in real time with our live 3D walkthrough.
             </p>
           </div>
           <div className="min-w-0">
             <iframe
               src="https://my.matterport.com/show/?m=f8WdXb5uWmq&brand=0&mls=1&mt=0&search=0&qs=1"
-              title="Rose Port Matterport walkthrough"
+              title="Rose Canyon Matterport walkthrough"
               className="block h-[400px] w-full rounded-xl border border-border"
               allowFullScreen
             />
@@ -118,8 +126,11 @@ export function OurWork() {
         </div>
       </section>
 
-      <section className="w-full py-16">
-        <h2 className="px-6 text-3xl font-bold tracking-tight lg:px-12">Government &amp; Commercial</h2>
+      <section
+        id="government-commercial"
+        className="w-full scroll-mt-28 px-6 py-16 md:px-12 lg:px-20"
+      >
+        <h2 className="text-3xl font-bold tracking-tight">Government &amp; Commercial</h2>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
           <article className="overflow-hidden rounded-xl border border-border bg-card">
             <img
@@ -145,11 +156,31 @@ export function OurWork() {
             </div>
           </article>
           <article className="overflow-hidden rounded-xl border border-border bg-card">
-            <div className="flex h-56 items-center justify-center bg-muted text-sm text-muted-foreground">
-              Placeholder image
+            <div className="relative h-56 w-full">
+              <img
+                src="/images/courthouse3.jpeg"
+                alt="West Jordan Courthouse hero"
+                className="h-full w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.25)' }}
+                aria-hidden
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-2 p-5">
+              <img src="/images/courthouse1.jpeg" alt="West Jordan Courthouse gallery one" className="h-48 w-full rounded-md object-cover" />
+              <img src="/images/courthouse6.jpeg" alt="West Jordan Courthouse gallery two" className="h-48 w-full rounded-md object-cover" />
             </div>
             <div className="p-5">
-              <h3 className="text-xl font-semibold">More Coming Soon</h3>
+              <span className="inline-flex rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Government Contracted
+              </span>
+              <h3 className="mt-3 text-xl font-semibold">West Jordan Courthouse</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A government-contracted courthouse build delivered to the highest standards of compliance, craftsmanship,
+                and durability.
+              </p>
             </div>
           </article>
         </div>

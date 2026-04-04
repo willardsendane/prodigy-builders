@@ -11,6 +11,7 @@ import { ProjectHurricane } from "./pages/ProjectHurricane";
 import { ProjectTraverse } from "./pages/ProjectTraverse";
 import { ClientDropbox } from "./pages/ClientDropbox";
 import { Contact } from "./pages/Contact";
+import { MeetOurFounder } from "./pages/MeetOurFounder";
 import { Layout } from "./components/Layout";
 import { WorkLayout } from "./components/WorkLayout";
 
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "about", Component: About },
+      { path: "meet-our-founder", Component: MeetOurFounder },
       {
         path: "work",
         Component: WorkLayout,
