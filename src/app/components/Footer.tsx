@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col items-stretch justify-between gap-10 py-12 md:flex-row md:items-center">
           <div className="max-w-md">
-            <p className="text-lg font-bold uppercase tracking-[0.2em] text-white">PRODIGY BUILDERS</p>
+            <p className="text-lg font-bold uppercase tracking-[0.2em] text-white">PRODIGY CONSTRUCTION</p>
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
               Designed to turn heads. Built to stand for generations.
             </p>
@@ -31,7 +31,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-1 inline-flex text-gray-400 transition-colors hover:text-[#C9A84C]"
-              aria-label="Prodigy Builders on Instagram"
+              aria-label="Prodigy Construction on Instagram"
             >
               <Instagram className="h-6 w-6" strokeWidth={1.5} />
             </a>
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 py-8 text-center">
-          <p className="text-xs tracking-wider text-gray-500">© 2026 Prodigy Builders. All rights reserved.</p>
+          <p className="text-xs tracking-wider text-gray-500">© 2026 Prodigy Construction. All rights reserved.</p>
         </div>
       </div>
     </footer>
