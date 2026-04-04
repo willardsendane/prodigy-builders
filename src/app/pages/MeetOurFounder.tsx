@@ -8,7 +8,7 @@ export function MeetOurFounder() {
           <ImageWithFallback
             src="/images/FounderHero2.png"
             alt="Thatcher Lamb, founder of Prodigy Construction"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-[center_20%] lg:object-[center_30%]"
             style={{ filter: 'grayscale(100%)' }}
           />
           <div
