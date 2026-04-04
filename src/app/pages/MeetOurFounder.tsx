@@ -9,7 +9,7 @@ export function MeetOurFounder() {
             src="/images/LambFamily.webp"
             alt="Thatcher Lamb and family"
             className="h-full w-full object-cover"
-            style={{ filter: 'grayscale(100%)' }}
+            style={{ filter: 'grayscale(100%)', objectPosition: 'center 50%' }}
           />
           <div
             className="pointer-events-none absolute inset-0"
