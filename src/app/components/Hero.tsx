@@ -12,7 +12,7 @@ export function Hero() {
           className="absolute inset-0"
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         >
-          <source src="/Hero5.mp4" type="video/mp4" />
+          <source src="/(2)hero12s.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} aria-hidden />
       </div>
