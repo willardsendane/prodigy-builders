@@ -37,16 +37,16 @@ export function PortfolioTeaser() {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-          <Link to="/work/foremaster" className="group relative block h-[400px] overflow-hidden">
+          <Link to="/work/hurricane" className="group relative block h-[400px] overflow-hidden">
             <ImageWithFallback
-              src="/images/Foremaster_V5.png"
-              alt="Foremaster Ridge"
+              src="/images/Hurricane_V1.png"
+              alt="Hurricane Retreat"
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
               <h3 className="text-xl md:text-2xl text-white mb-3 tracking-wide" style={{ fontWeight: 600 }}>
-                Foremaster Ridge
+                Hurricane Retreat
               </h3>
               <span className={`inline-flex items-center gap-2 text-sm ${goldClass} group-hover:gap-3 transition-all duration-300 tracking-wide`}>
                 View Project →
@@ -54,16 +54,16 @@ export function PortfolioTeaser() {
             </div>
           </Link>
 
-          <Link to="/work/hideout" className="group relative block h-[400px] overflow-hidden">
+          <Link to="/work#government-commercial" className="group relative block h-[400px] overflow-hidden">
             <ImageWithFallback
-              src="/images/Hideout_V1.png"
-              alt="Hideout"
+              src="/images/Prison_V6.jpg"
+              alt="Utah State Correctional Facility"
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
               <h3 className="text-xl md:text-2xl text-white mb-3 tracking-wide" style={{ fontWeight: 600 }}>
-                Hideout
+                Utah State Correctional Facility
               </h3>
               <span className={`inline-flex items-center gap-2 text-sm ${goldClass} group-hover:gap-3 transition-all duration-300 tracking-wide`}>
                 View Project →
