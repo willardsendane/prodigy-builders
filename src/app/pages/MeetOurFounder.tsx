@@ -3,13 +3,13 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 export function MeetOurFounder() {
   return (
     <main className="min-w-0 overflow-x-hidden">
-      <section className="relative flex h-screen min-h-[100dvh] w-full min-w-0 items-center justify-center overflow-x-hidden">
-        <div className="absolute inset-0 isolate">
+      <section className="relative flex h-screen min-h-[100dvh] w-full min-w-0 items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 isolate overflow-hidden">
           <ImageWithFallback
-            src="/images/LambFamily.webp"
-            alt="Thatcher Lamb and family"
-            className="h-full w-full object-cover"
-            style={{ filter: 'grayscale(100%)', objectPosition: 'center 50%' }}
+            src="/images/FounderHero2.png"
+            alt="Thatcher Lamb, founder of Prodigy Construction"
+            className="h-full w-full object-cover object-center"
+            style={{ filter: 'grayscale(100%)' }}
           />
           <div
             className="pointer-events-none absolute inset-0"
@@ -41,23 +41,23 @@ export function MeetOurFounder() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="mx-auto w-full min-w-0 max-w-[500px] lg:col-span-6 lg:mx-0 lg:max-w-none">
               <div className="grid min-h-0 grid-cols-1 gap-2 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-stretch">
-                <div className="hidden min-h-0 flex-col gap-2 lg:flex lg:h-[600px]">
-                  {[
-                    { src: '/images/Thatcher1.png', alt: 'Thatcher Lamb' },
-                    { src: '/images/Thatcher2.png', alt: 'Thatcher Lamb portrait two' },
-                    { src: '/images/Thatcher3.png', alt: 'Thatcher Lamb portrait three' },
-                  ].map((item) => (
-                    <div key={item.src} className="min-h-0 flex-1 basis-0 overflow-hidden">
-                      <img src={item.src} alt={item.alt} className="h-full w-full object-cover" />
-                    </div>
-                  ))}
-                </div>
-                <div className="min-h-0 w-full overflow-hidden lg:h-[600px]">
+                <div className="order-1 min-h-0 w-full overflow-hidden lg:order-none lg:col-start-2 lg:row-start-1 lg:h-[600px]">
                   <img
                     src="/images/LambFamily.webp"
                     alt="Thatcher Lamb and family"
                     className="h-auto w-full max-w-full object-cover object-center lg:h-full lg:min-h-0 lg:w-full"
                   />
+                </div>
+                <div className="order-2 flex h-[120px] min-h-0 w-full flex-row gap-2 lg:order-none lg:col-start-1 lg:row-start-1 lg:h-[600px] lg:flex-col">
+                  {[
+                    { src: '/images/Thatcher1.png', alt: 'Thatcher Lamb' },
+                    { src: '/images/Thatcher2.png', alt: 'Thatcher Lamb portrait two' },
+                    { src: '/images/Thatcher3.png', alt: 'Thatcher Lamb portrait three' },
+                  ].map((item) => (
+                    <div key={item.src} className="min-h-0 min-w-0 flex-1 overflow-hidden lg:flex-1 lg:basis-0">
+                      <img src={item.src} alt={item.alt} className="h-full w-full object-cover" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
