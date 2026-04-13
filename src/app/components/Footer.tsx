@@ -18,10 +18,10 @@ export function Footer() {
           <div className="flex w-full flex-col items-end gap-3 text-right md:ml-auto md:w-auto">
             <p className="text-sm text-gray-400">2795 Rolling Knolls Drive, Provo, UT 84604</p>
             <a
-              href="mailto:thatcher@prodigybuilders.net"
+              href="mailto:thatcher@build-prodigy.com"
               className="text-sm text-gray-400 transition-colors hover:text-white"
             >
-              thatcher@prodigybuilders.net
+              thatcher@build-prodigy.com
             </a>
             <a href="tel:8016696228" className="text-sm text-gray-400 transition-colors hover:text-white">
               (801)669-6228

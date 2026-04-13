@@ -4,7 +4,7 @@ const LOGO_FILES = [
   'Ecovap1.png',
   'Jordan1.png',
   'Landmark1.png',
-  'Magna1.png',
+  'Magna2.png',
   'Municipal1.png',
   'SLC1.png',
   'Summit1.png',

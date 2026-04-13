@@ -41,10 +41,10 @@ export function ContactInfo() {
               Email
             </h3>
             <a
-              href="mailto:thatcher@prodigybuilders.net"
+              href="mailto:thatcher@build-prodigy.com"
               className="text-sm text-foreground/70 hover:text-accent transition-colors tracking-wide block"
             >
-              thatcher@prodigybuilders.net
+              thatcher@build-prodigy.com
             </a>
           </div>
         </div>

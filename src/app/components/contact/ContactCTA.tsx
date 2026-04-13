@@ -16,10 +16,10 @@ export function ContactCTA() {
             (801) 669-6228
           </a>
           <a
-            href="mailto:thatcher@prodigybuilders.net"
+            href="mailto:thatcher@build-prodigy.com"
             className="text-accent hover:text-accent/80 transition-colors text-lg tracking-wide"
           >
-            thatcher@prodigybuilders.net
+            thatcher@build-prodigy.com
           </a>
         </div>
       </div>
