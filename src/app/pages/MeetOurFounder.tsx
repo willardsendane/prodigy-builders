@@ -13,7 +13,7 @@ export function MeetOurFounder() {
           <ImageWithFallback
             src={FOUNDER_HERO_MOBILE_SRC}
             alt={heroAlt}
-            className="absolute inset-0 h-full w-full object-cover object-[center_30%] lg:hidden"
+            className="absolute inset-0 h-full w-full object-cover object-[center_30%] max-[768px]:origin-[center_25%] max-[768px]:scale-[1.4] max-[768px]:object-[center_25%] lg:hidden"
             style={{ filter: 'grayscale(100%)' }}
           />
           <ImageWithFallback
