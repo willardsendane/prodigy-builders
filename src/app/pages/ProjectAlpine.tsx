@@ -42,7 +42,7 @@ export function ProjectAlpine() {
         </Link>
 
         <div className="relative overflow-hidden rounded-xl">
-          <img src="/images/Alpine_V1.png" alt="Alpine Manor hero" className="h-[560px] w-full object-cover" />
+          <img src="/images/Alpine_V1.1.png" alt="Alpine Manor hero" className="h-[560px] w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <h1 className="absolute bottom-0 left-0 p-6 text-5xl font-bold tracking-tight text-white sm:p-8 sm:text-6xl">
             Alpine Manor

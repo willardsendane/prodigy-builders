@@ -1,14 +1,25 @@
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
+const FOUNDER_HERO_MOBILE_SRC = '/images/LambFamily.webp';
+const FOUNDER_HERO_DESKTOP_SRC = '/images/FounderHero2.png';
+
 export function MeetOurFounder() {
+  const heroAlt = 'Thatcher Lamb, founder of Prodigy Construction';
+
   return (
     <main className="min-w-0 overflow-x-hidden">
       <section className="relative flex h-screen min-h-[100dvh] w-full min-w-0 items-center justify-center overflow-hidden">
         <div className="absolute inset-0 isolate overflow-hidden">
           <ImageWithFallback
-            src="/images/FounderHero2.png"
-            alt="Thatcher Lamb, founder of Prodigy Construction"
-            className="h-full w-full object-cover object-[center_20%] lg:object-[center_30%]"
+            src={FOUNDER_HERO_MOBILE_SRC}
+            alt={heroAlt}
+            className="absolute inset-0 h-full w-full object-cover object-[center_30%] lg:hidden"
+            style={{ filter: 'grayscale(100%)' }}
+          />
+          <ImageWithFallback
+            src={FOUNDER_HERO_DESKTOP_SRC}
+            alt={heroAlt}
+            className="absolute inset-0 hidden h-full w-full object-cover object-[center_30%] lg:block"
             style={{ filter: 'grayscale(100%)' }}
           />
           <div

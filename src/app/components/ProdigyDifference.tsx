@@ -10,7 +10,7 @@ export function ProdigyDifference() {
     {
       icon: Ruler,
       title: "Unmatched Precision",
-      description: "Decades of municipal work have honed our attention to detail, ensuring every aspect of your home meets the highest standards."
+      description: "Decades of experience have honed our attention to detail, ensuring every aspect of your home meets the highest standards."
     },
     {
       icon: Home,
