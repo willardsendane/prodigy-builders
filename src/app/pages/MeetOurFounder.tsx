@@ -132,7 +132,7 @@ export function MeetOurFounder() {
             </div>
             <div className="order-1 min-w-0 lg:order-2">
               <img
-                src="/images/ToThatcher.png"
+                src="/images/ToThatcher4.1.png"
                 alt="Thatcher Lamb"
                 className="h-auto w-full object-contain"
               />
