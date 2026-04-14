@@ -1,25 +1,28 @@
+import { ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
-const FOUNDER_HERO_MOBILE_SRC = '/images/LambFamily.webp';
+const FOUNDER_HERO_MOBILE_SRC = '/images/FounderMobileHero.png';
 const FOUNDER_HERO_DESKTOP_SRC = '/images/FounderHero2.png';
 
+const CREDENTIAL_CHIPS = ['Utah Licensed GC', '15+ Years', 'Proud Dad'] as const;
+
 export function MeetOurFounder() {
-  const heroAlt = 'Thatcher Lamb, founder of Prodigy Construction';
+  const heroAlt = 'Thatcher Lamb, founder of Prodigy Builders';
 
   return (
     <main className="min-w-0 overflow-x-hidden">
-      <section className="relative flex h-screen min-h-[100dvh] w-full min-w-0 items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 isolate overflow-hidden">
+      <section className="relative isolate w-full min-w-0 overflow-hidden">
+        <div className="relative w-full">
           <ImageWithFallback
             src={FOUNDER_HERO_MOBILE_SRC}
             alt={heroAlt}
-            className="absolute inset-0 h-full w-full object-cover object-[center_30%] max-[768px]:origin-[center_25%] max-[768px]:scale-[1.4] max-[768px]:object-[center_25%] lg:hidden"
+            className="block h-auto w-full max-w-full lg:hidden"
             style={{ filter: 'grayscale(100%)' }}
           />
           <ImageWithFallback
             src={FOUNDER_HERO_DESKTOP_SRC}
             alt={heroAlt}
-            className="absolute inset-0 hidden h-full w-full object-cover object-[center_30%] lg:block"
+            className="hidden h-auto w-full max-w-full lg:block"
             style={{ filter: 'grayscale(100%)' }}
           />
           <div
@@ -34,16 +37,48 @@ export function MeetOurFounder() {
           />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-12 pt-28 text-center sm:px-8 sm:pt-32">
-          <h1
-            className="break-words text-4xl tracking-wide sm:text-5xl md:text-7xl lg:text-8xl"
-            style={{ fontWeight: 900, lineHeight: 1.1 }}
-          >
-            Meet Our <span style={{ color: '#C9A84C' }}>Founder</span>
-          </h1>
-          <p className="mx-auto mt-8 max-w-2xl text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.25em] text-white/90 sm:text-xs md:text-sm">
-            Thatcher Lamb — Founder, Prodigy Construction
-          </p>
+        <div className="absolute inset-0 z-10 flex flex-col px-6 pt-28 sm:px-8 sm:pt-32">
+          <div className="flex min-h-0 flex-1 flex-col items-center justify-center pb-8 text-center">
+            <div className="mx-auto w-full max-w-7xl">
+              <h1
+                className="break-words text-4xl tracking-wide sm:text-5xl md:text-7xl lg:text-8xl"
+                style={{ fontWeight: 900, lineHeight: 1.1 }}
+              >
+                Meet Our <span style={{ color: '#C9A84C' }}>Founder</span>
+              </h1>
+              <p
+                className="mt-8 text-[0.78rem] font-medium uppercase leading-relaxed tracking-[0.25em] text-white/90 sm:text-[0.9rem] md:text-[1.05rem]"
+                style={{ fontWeight: 600 }}
+              >
+                THATCHER LAMB
+              </p>
+              <p className="mt-2 text-[0.78rem] font-medium leading-relaxed text-white/90 sm:text-[0.9rem] md:text-[1.05rem]">
+                Founder, Prodigy Builders
+              </p>
+              <div className="mx-auto mt-6 flex max-w-md flex-wrap items-center justify-center gap-2 sm:gap-3">
+                {CREDENTIAL_CHIPS.map((label) => {
+                  const chipBase =
+                    'inline-flex rounded-full px-3 py-1.5 text-[0.65rem] font-medium tracking-wide sm:text-xs';
+                  const isProudDad = label === 'Proud Dad';
+                  return (
+                    <span
+                      key={label}
+                      className={
+                        isProudDad
+                          ? `${chipBase} bg-[#C9A84C] text-[#0a0a0a]`
+                          : `${chipBase} border border-[#C9A84C] text-[#C9A84C]`
+                      }
+                    >
+                      {label}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="flex shrink-0 justify-center pb-5 pt-2" aria-hidden>
+            <ChevronDown className="founder-hero-scroll-indicator h-7 w-7 text-white sm:h-8 sm:w-8" strokeWidth={1.75} />
+          </div>
         </div>
       </section>
 

@@ -20,3 +20,26 @@
     animation: none;
   }
 }
+
+@keyframes founder-hero-scroll-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+.founder-hero-scroll-indicator {
+  animation: founder-hero-scroll-bob 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .founder-hero-scroll-indicator {
+    animation: none;
+    opacity: 0.85;
+  }
+}
