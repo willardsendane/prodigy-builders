@@ -55,10 +55,10 @@ export function MeetOurFounder() {
               <p className="mt-2 text-[0.78rem] font-medium leading-relaxed text-white/90 sm:text-[0.9rem] md:text-[1.05rem]">
                 Founder, Prodigy Builders
               </p>
-              <div className="mx-auto mt-6 flex max-w-md flex-wrap items-center justify-center gap-2 sm:gap-3">
+              <div className="mx-auto mt-6 flex max-w-lg flex-wrap items-center justify-center gap-[0.575rem] sm:gap-[0.8625rem]">
                 {CREDENTIAL_CHIPS.map((label) => {
                   const chipBase =
-                    'inline-flex rounded-full px-3 py-1.5 text-[0.65rem] font-medium tracking-wide sm:text-xs';
+                    'inline-flex rounded-full px-[0.8625rem] py-[0.43125rem] text-[length:calc(0.65rem*1.15)] font-medium tracking-wide sm:text-[length:calc(0.75rem*1.15)]';
                   const isProudDad = label === 'Proud Dad';
                   return (
                     <span
