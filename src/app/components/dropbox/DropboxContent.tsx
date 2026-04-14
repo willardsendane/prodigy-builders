@@ -1,4 +1,5 @@
 import { Upload, FileText, Lock, FolderOpen } from 'lucide-react';
+import { DropboxUploadArea } from './DropboxUploadArea';
 
 export function DropboxContent() {
   return (
@@ -59,31 +60,7 @@ export function DropboxContent() {
           </div>
         </div>
 
-        {/* Placeholder for Future Dropbox Functionality */}
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-lg border-2 border-dashed border-white/10 bg-[#141410] p-16 text-center space-y-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/10 border border-accent/30">
-              <Upload className="w-10 h-10 text-accent" />
-            </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl tracking-tight" style={{ fontWeight: 900 }}>
-                Document Upload Area
-              </h3>
-              <p className="text-foreground/70 tracking-wide max-w-xl mx-auto">
-                This is a template placeholder. Document upload and management functionality 
-                will be implemented here with secure file storage, download capabilities, 
-                and client-specific access controls.
-              </p>
-            </div>
-
-            <div className="pt-4">
-              <button className="px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm">
-                COMING SOON
-              </button>
-            </div>
-          </div>
-        </div>
+        <DropboxUploadArea />
 
         {/* Instructions Section */}
         <div className="max-w-3xl mx-auto mt-24 space-y-8">
