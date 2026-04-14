@@ -47,12 +47,12 @@ export function MeetOurFounder() {
                 Meet Our <span style={{ color: '#C9A84C' }}>Founder</span>
               </h1>
               <p
-                className="mt-8 text-[0.78rem] font-medium uppercase leading-relaxed tracking-[0.25em] text-white/90 sm:text-[0.9rem] md:text-[1.05rem]"
-                style={{ fontWeight: 600 }}
+                className="mt-8 text-[length:calc(0.78rem*1.35)] uppercase leading-relaxed tracking-[0.25em] text-white/90 sm:text-[length:calc(0.9rem*1.35)] md:text-[length:calc(1.05rem*1.35)]"
+                style={{ fontWeight: 700 }}
               >
                 THATCHER LAMB
               </p>
-              <p className="mt-2 text-[0.78rem] font-medium leading-relaxed text-white/90 sm:text-[0.9rem] md:text-[1.05rem]">
+              <p className="mt-2 text-[length:calc(0.78rem*1.15)] font-medium leading-relaxed text-[#C9A84C] sm:text-[length:calc(0.9rem*1.15)] md:text-[length:calc(1.05rem*1.15)]">
                 Founder, Prodigy Builders
               </p>
               <div className="mx-auto mt-6 flex max-w-lg flex-wrap items-center justify-center gap-[0.575rem] sm:gap-[0.8625rem]">
