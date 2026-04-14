@@ -65,7 +65,7 @@ export function Navigation() {
               onBlur={closeDesktopOurWorkDropdownWithDelay}
             >
               <div className="flex items-center gap-1">
-                <Link to="/our-work" className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
+                <Link to="/our-work" className="text-sm tracking-wide text-foreground/70 hover:text-[#C9A84C] transition-colors">
                   Our Work
                 </Link>
                 <span
@@ -99,7 +99,7 @@ export function Navigation() {
               </div>
             </div>
             {navLinks.map(({ to, label }) => (
-              <Link key={to} to={to} className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors">
+              <Link key={to} to={to} className="text-sm tracking-wide text-foreground/70 hover:text-[#C9A84C] transition-colors">
                 {label}
               </Link>
             ))}
@@ -127,7 +127,7 @@ export function Navigation() {
                 <Link
                   to="/our-work"
                   onClick={() => setMenuOpen(false)}
-                  className="flex-1 py-3 px-2 text-sm tracking-wide text-foreground/70 hover:text-accent transition-colors"
+                  className="flex-1 py-3 px-2 text-sm tracking-wide text-foreground/70 hover:text-[#C9A84C] transition-colors"
                 >
                   Our Work
                 </Link>
@@ -172,7 +172,7 @@ export function Navigation() {
                 key={to}
                 to={to}
                 onClick={() => setMenuOpen(false)}
-                className="py-3 px-2 text-sm tracking-wide text-foreground/70 hover:text-accent transition-colors border-b border-white/5 last:border-0"
+                className="py-3 px-2 text-sm tracking-wide text-foreground/70 hover:text-[#C9A84C] transition-colors border-b border-white/5 last:border-0"
               >
                 {label}
               </Link>
