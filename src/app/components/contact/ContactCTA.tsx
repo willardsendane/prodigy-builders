@@ -8,7 +8,7 @@ export function ContactCTA() {
         <p className="text-[0.9rem] md:text-lg text-foreground/80 mb-8 max-w-xl mx-auto tracking-wide">
           We&apos;re always here to discuss your project. Call or email us anytime.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+        <div className="flex flex-col items-center justify-center gap-3">
           <a
             href="tel:8016696228"
             className="text-accent hover:text-accent/80 transition-colors text-lg tracking-wide"

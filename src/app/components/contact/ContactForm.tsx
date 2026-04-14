@@ -83,12 +83,14 @@ export function ContactForm() {
                 className="min-h-32 bg-input-background border-white/10 text-foreground placeholder:text-muted-foreground focus-visible:border-accent focus-visible:ring-accent/30"
               />
             </div>
-            <button
-              type="submit"
-              className="w-full sm:w-auto px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm"
-            >
-              SUBMIT
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm"
+              >
+                SUBMIT
+              </button>
+            </div>
           </form>
         </div>
       </div>
