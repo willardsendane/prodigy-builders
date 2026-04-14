@@ -5,11 +5,11 @@ import logo from '../../assets/58da60d0-3f15-4032-a88a-c8b7573fc5af.png';
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/work', label: 'Work' },
-  { to: '/about', label: 'About' },
+  { to: '/work', label: 'Our Work' },
+  { to: '/about', label: 'About Us' },
   { to: '/meet-our-founder', label: 'Our Founder' },
   { to: '/dropbox', label: 'Client Dropbox' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact', label: 'Contact Us' },
 ];
 
 export function Navigation() {
