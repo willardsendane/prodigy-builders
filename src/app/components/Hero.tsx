@@ -29,12 +29,12 @@ export function Hero() {
         </p>
         <div className="flex flex-col items-center gap-3">
           <Link
-            to="/contact"
+            to="/contact-us"
             className="inline-block rounded-none border-2 border-transparent bg-[#C9A84C] px-10 py-4 text-sm font-bold uppercase tracking-wider text-[#1a1a1a] transition-all duration-200 hover:bg-transparent hover:border-[#C9A84C] hover:text-[#C9A84C]"
           >
             START YOUR BUILD
           </Link>
-          <Link to="/work" className="text-sm text-accent transition-colors hover:text-accent-foreground">
+          <Link to="/our-work" className="text-sm text-accent transition-colors hover:text-accent-foreground">
             View Our Work
           </Link>
         </div>

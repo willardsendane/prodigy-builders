@@ -46,7 +46,7 @@ export function ProcessTeaser() {
 
         <div className="text-center">
           <Link
-            to="/contact"
+            to="/contact-us"
             className="inline-flex items-center gap-2 text-sm text-[#C9A84C] transition-all duration-300 hover:gap-3 tracking-wide"
           >
             Build with Us

@@ -5,13 +5,13 @@ const goldClass = 'text-[#C9A84C]';
 
 export function PortfolioTeaser() {
   return (
-    <section id="work" className="bg-background py-32">
+    <section id="our-work" className="bg-background py-32">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-[2.25rem] sm:text-4xl md:text-5xl mb-20 tracking-tight" style={{ fontWeight: 900 }}>
           Our Work.
         </h2>
 
-        <Link to="/work" className="group block mb-8 md:mb-10">
+        <Link to="/berkshire-villa" className="group block mb-8 md:mb-10">
           <div className="relative w-full h-[500px] overflow-hidden">
             <ImageWithFallback
               src="/images/Moms_V1.png"
@@ -37,7 +37,7 @@ export function PortfolioTeaser() {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-          <Link to="/work/hurricane" className="group relative block h-[400px] overflow-hidden">
+          <Link to="/our-work/hurricane-retreat" className="group relative block h-[400px] overflow-hidden">
             <ImageWithFallback
               src="/images/Hurricane_V1.png"
               alt="Hurricane Retreat"
@@ -54,7 +54,7 @@ export function PortfolioTeaser() {
             </div>
           </Link>
 
-          <Link to="/work#government-commercial" className="group relative block h-[400px] overflow-hidden">
+          <Link to="/our-work#government-commercial" className="group relative block h-[400px] overflow-hidden">
             <ImageWithFallback
               src="/images/Prison_V6.jpg"
               alt="Utah State Correctional Facility"
@@ -74,7 +74,7 @@ export function PortfolioTeaser() {
 
         <div className="flex justify-center mt-12 md:mt-16">
           <Link
-            to="/work"
+            to="/our-work"
             className={`inline-flex items-center gap-2 text-sm font-medium ${goldClass} hover:gap-3 transition-all duration-300 tracking-wide`}
           >
             View All Projects →

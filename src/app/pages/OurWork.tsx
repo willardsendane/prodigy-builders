@@ -1,13 +1,13 @@
 import { Link } from 'react-router';
 
 const customHomes = [
-  { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.1.png', href: '/work/alpine' },
-  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png', href: '/work/cottonwood' },
-  { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/work/foremaster' },
-  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png', href: '/work/hideout' },
-  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png', href: '/work/holladay' },
-  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png', href: '/work/hurricane' },
-  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png', href: '/work/traverse' },
+  { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.1.png', href: '/our-work/alpine-manor' },
+  { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png', href: '/our-work/cottonwood-view' },
+  { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/our-work/foremaster-ridge' },
+  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png', href: '/our-work/hideout' },
+  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png', href: '/our-work/holladay' },
+  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png', href: '/our-work/hurricane-retreat' },
+  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png', href: '/our-work/traverse-outlook' },
 ];
 
 export function OurWork() {
@@ -42,7 +42,12 @@ export function OurWork() {
           <div className="absolute bottom-0 left-0 right-0 z-10 px-6 py-6 lg:px-12 lg:py-10">
             <p className="text-xs font-medium uppercase tracking-widest text-[#C9A84C] sm:text-sm">FEATURED PROJECT</p>
             <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
-              Berkshire Villa
+              <Link
+                to="/berkshire-villa"
+                className="text-inherit no-underline transition-opacity hover:opacity-90 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black/50"
+              >
+                Berkshire Villa
+              </Link>
             </h1>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75 sm:text-base">
               Designed to turn heads. Built to stand for generations.

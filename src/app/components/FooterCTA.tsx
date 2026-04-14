@@ -8,7 +8,7 @@ export function FooterCTA() {
           Ready to build something extraordinary?
         </h2>
         <Link
-          to="/contact"
+          to="/contact-us"
           className="inline-block px-12 py-5 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 tracking-wider text-sm"
         >
           GET IN TOUCH

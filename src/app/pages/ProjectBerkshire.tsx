@@ -1,16 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
-const galleryImages = [
-  '/images/Hideout_V1.png',
-  '/images/Hideout_V2.png',
-  '/images/Hideout_V4.png',
-  '/images/Hideout_V6.png',
-  '/images/Hideout_V7.png',
-  '/images/Hideout_V8.png',
-];
+const galleryImages = ['/images/Moms_V2.png', '/images/Moms_V3.png', '/images/Moms_V4.png'];
+const matterportTourUrl = 'https://my.matterport.com/show/?m=phQb9AB4iYo&brand=0&mls=1&mt=0&search=0&qs=1';
 
-export function ProjectHideout() {
+export function ProjectBerkshire() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const activeImage = useMemo(() => {
@@ -42,10 +36,14 @@ export function ProjectHideout() {
         </Link>
 
         <div className="relative overflow-hidden rounded-xl">
-          <img src="/images/Hideout_V3.png" alt="Hideout hero" className="h-[560px] w-full object-cover" />
+          <img
+            src="/images/Moms_V1.png"
+            alt="Berkshire Villa hero"
+            className="h-[560px] w-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <h1 className="absolute bottom-0 left-0 p-6 text-5xl font-bold tracking-tight text-white sm:p-8 sm:text-6xl">
-            Hideout
+            Berkshire Villa
           </h1>
         </div>
 
@@ -54,7 +52,7 @@ export function ProjectHideout() {
           <div className="px-4 py-5" style={{ backgroundColor: '#1a1a1a' }}>
             <div className="flex flex-wrap items-center justify-center gap-3 text-center text-xs font-semibold uppercase tracking-wider sm:text-sm">
               <span className="text-muted-foreground">
-                Location: <span className="text-white">Utah</span>
+                Location: <span className="text-white">Utah County, UT</span>
               </span>
               <span className="text-muted-foreground" aria-hidden="true">
                 |
@@ -73,19 +71,27 @@ export function ProjectHideout() {
           <div className="h-px w-full" style={{ backgroundColor: '#C9A84C' }} />
         </div>
 
-        <div className="mt-10 columns-1 gap-4 md:columns-2 lg:columns-3">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="overflow-hidden rounded-xl border border-border bg-card sm:col-span-2">
+            <iframe
+              src={matterportTourUrl}
+              title="Berkshire Villa Matterport walkthrough"
+              allowFullScreen
+              className="h-[360px] w-full sm:h-[520px]"
+            />
+          </div>
           {galleryImages.map((image, index) => (
             <button
               key={image}
               type="button"
-              className="mb-4 block w-full break-inside-avoid overflow-hidden rounded-xl border border-border bg-card text-left"
+              className="block w-full overflow-hidden rounded-xl border border-border bg-card text-left"
               onClick={() => setActiveIndex(index)}
             >
               <img
                 src={image}
-                alt={`Hideout gallery image ${index + 1}`}
+                alt={`Berkshire Villa gallery image ${index + 1}`}
                 loading="lazy"
-                className="h-auto w-full object-cover transition-transform duration-300 hover:scale-[1.01]"
+                className="h-[400px] w-full object-cover transition-transform duration-300 hover:scale-[1.01]"
               />
             </button>
           ))}
@@ -135,7 +141,7 @@ export function ProjectHideout() {
           </button>
           <img
             src={activeImage}
-            alt="Hideout lightbox preview"
+            alt="Berkshire Villa lightbox preview"
             className="max-h-[90vh] max-w-[92vw] rounded-lg object-contain"
             onClick={(event) => event.stopPropagation()}
           />

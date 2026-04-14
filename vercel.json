@@ -1,1 +1,20 @@
-{"rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}
+{
+  "redirects": [
+    { "source": "/our-work/alpinemanor", "destination": "/our-work/alpine-manor", "permanent": true },
+    { "source": "/our-work/cottonwoodview", "destination": "/our-work/cottonwood-view", "permanent": true },
+    { "source": "/our-work/foremasterridge", "destination": "/our-work/foremaster-ridge", "permanent": true },
+    { "source": "/our-work/hurricaneretreat", "destination": "/our-work/hurricane-retreat", "permanent": true },
+    { "source": "/our-work/traverseoutlook", "destination": "/our-work/traverse-outlook", "permanent": true },
+    { "source": "/work/alpinemanor", "destination": "/our-work/alpine-manor", "permanent": true },
+    { "source": "/work/cottonwoodview", "destination": "/our-work/cottonwood-view", "permanent": true },
+    { "source": "/work/foremasterridge", "destination": "/our-work/foremaster-ridge", "permanent": true },
+    { "source": "/work/hurricaneretreat", "destination": "/our-work/hurricane-retreat", "permanent": true },
+    { "source": "/work/traverseoutlook", "destination": "/our-work/traverse-outlook", "permanent": true },
+    { "source": "/work/:path*", "destination": "/our-work/:path*", "permanent": true },
+    { "source": "/work", "destination": "/our-work", "permanent": true },
+    { "source": "/about", "destination": "/about-us", "permanent": true },
+    { "source": "/contact", "destination": "/contact-us", "permanent": true },
+    { "source": "/meet-our-founder", "destination": "/our-founder", "permanent": true }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

@@ -9,6 +9,7 @@ import { ProjectHideout } from "./pages/ProjectHideout";
 import { ProjectHolladay } from "./pages/ProjectHolladay";
 import { ProjectHurricane } from "./pages/ProjectHurricane";
 import { ProjectTraverse } from "./pages/ProjectTraverse";
+import { ProjectBerkshire } from "./pages/ProjectBerkshire";
 import { ClientDropbox } from "./pages/ClientDropbox";
 import { Contact } from "./pages/Contact";
 import { MeetOurFounder } from "./pages/MeetOurFounder";
@@ -21,24 +22,25 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: [
       { index: true, Component: Home },
-      { path: "about", Component: About },
-      { path: "meet-our-founder", Component: MeetOurFounder },
+      { path: "about-us", Component: About },
+      { path: "our-founder", Component: MeetOurFounder },
       {
-        path: "work",
+        path: "our-work",
         Component: WorkLayout,
         children: [
           { index: true, Component: OurWork },
-          { path: "foremaster", Component: ProjectForemaster },
-          { path: "cottonwood", Component: ProjectCottonwood },
-          { path: "alpine", Component: ProjectAlpine },
+          { path: "foremaster-ridge", Component: ProjectForemaster },
+          { path: "cottonwood-view", Component: ProjectCottonwood },
+          { path: "alpine-manor", Component: ProjectAlpine },
           { path: "hideout", Component: ProjectHideout },
           { path: "holladay", Component: ProjectHolladay },
-          { path: "hurricane", Component: ProjectHurricane },
-          { path: "traverse", Component: ProjectTraverse },
+          { path: "hurricane-retreat", Component: ProjectHurricane },
+          { path: "traverse-outlook", Component: ProjectTraverse },
         ],
       },
+      { path: "berkshire-villa", Component: ProjectBerkshire },
       { path: "dropbox", Component: ClientDropbox },
-      { path: "contact", Component: Contact },
+      { path: "contact-us", Component: Contact },
     ],
   },
 ]);
