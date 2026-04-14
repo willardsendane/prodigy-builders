@@ -34,21 +34,24 @@ function injectUploaderCenteringStyles(root: Node) {
 
 type ClientInfo = { fullName: string; projectName: string };
 
-function buildUploadMetadata(info: ClientInfo): Record<string, string> {
-  return {
-    client_full_name: info.fullName,
-    project_name: info.projectName,
-  };
-}
-
 export function DropboxUploadArea() {
   const pubkey = import.meta.env.VITE_UPLOADCARE_PUBLIC_KEY ?? '';
+  const configRef = useRef<HTMLElement | null>(null);
   const ctxRef = useRef<HTMLElement | null>(null);
   const uploaderRef = useRef<HTMLElement | null>(null);
   const [uploadSuccessMessage, setUploadSuccessMessage] = useState<string | null>(null);
   const [clientInfo, setClientInfo] = useState<ClientInfo | null>(null);
   const [fullName, setFullName] = useState('');
   const [projectName, setProjectName] = useState('');
+
+  useLayoutEffect(() => {
+    if (configRef.current && clientInfo) {
+      (configRef.current as HTMLElement & { metadata?: Record<string, string> }).metadata = {
+        client_full_name: clientInfo.fullName,
+        project_name: clientInfo.projectName,
+      };
+    }
+  }, [clientInfo]);
 
   useLayoutEffect(() => {
     if (!pubkey || !clientInfo) return;
@@ -96,8 +99,6 @@ export function DropboxUploadArea() {
     setProjectName('');
     setUploadSuccessMessage(null);
   };
-
-  const metadataJson = clientInfo ? JSON.stringify(buildUploadMetadata(clientInfo)) : '';
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -176,12 +177,14 @@ export function DropboxUploadArea() {
         ) : (
           <div className="text-center">
             <uc-config
+              ref={(node) => {
+                configRef.current = node;
+              }}
               ctx-name={CTX_NAME}
               pubkey={pubkey}
               source-list="local, camera"
               multiple="true"
               use-cloud-image-editor="false"
-              metadata={metadataJson}
             />
             <uc-upload-ctx-provider
               ref={(node) => {
