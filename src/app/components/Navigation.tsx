@@ -4,7 +4,6 @@ import { Menu, X } from 'lucide-react';
 import logo from '../../assets/58da60d0-3f15-4032-a88a-c8b7573fc5af.png';
 
 const navLinks = [
-  { to: '/', label: 'Home' },
   { to: '/about-us', label: 'About Us' },
   { to: '/our-founder', label: 'Our Founder' },
   { to: '/dropbox', label: 'Client Dropbox' },
@@ -57,6 +56,9 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
+            <Link to="/" className="text-sm tracking-wide text-foreground/70 hover:text-[#C9A84C] transition-colors">
+              Home
+            </Link>
             <div
               className="relative"
               onMouseEnter={openDesktopOurWorkDropdown}
@@ -122,6 +124,13 @@ export function Navigation() {
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a] border-b border-white/5">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-1">
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              className="py-3 px-2 text-sm tracking-wide text-foreground/70 hover:text-[#C9A84C] transition-colors border-b border-white/5"
+            >
+              Home
+            </Link>
             <div className="border-b border-white/5">
               <div className="flex items-center justify-between">
                 <Link
