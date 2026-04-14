@@ -32,14 +32,26 @@ function injectUploaderCenteringStyles(root: Node) {
   visit(root);
 }
 
+type ClientInfo = { fullName: string; projectName: string };
+
+function buildUploadMetadata(info: ClientInfo): Record<string, string> {
+  return {
+    client_full_name: info.fullName,
+    project_name: info.projectName,
+  };
+}
+
 export function DropboxUploadArea() {
   const pubkey = import.meta.env.VITE_UPLOADCARE_PUBLIC_KEY ?? '';
   const ctxRef = useRef<HTMLElement | null>(null);
   const uploaderRef = useRef<HTMLElement | null>(null);
   const [uploadSuccessMessage, setUploadSuccessMessage] = useState<string | null>(null);
+  const [clientInfo, setClientInfo] = useState<ClientInfo | null>(null);
+  const [fullName, setFullName] = useState('');
+  const [projectName, setProjectName] = useState('');
 
   useLayoutEffect(() => {
-    if (!pubkey) return;
+    if (!pubkey || !clientInfo) return;
     const host = uploaderRef.current;
     if (!host) return;
 
@@ -47,11 +59,11 @@ export function DropboxUploadArea() {
     run();
     const timeouts = [0, 50, 200, 500].map((ms) => window.setTimeout(run, ms));
     return () => timeouts.forEach((id) => window.clearTimeout(id));
-  }, [pubkey]);
+  }, [pubkey, clientInfo]);
 
   useEffect(() => {
     const el = ctxRef.current;
-    if (!el || !pubkey) return;
+    if (!el || !pubkey || !clientInfo) return;
 
     const onCommonUploadSuccess = () => {
       setUploadSuccessMessage('Your files were uploaded successfully.');
@@ -68,7 +80,24 @@ export function DropboxUploadArea() {
       el.removeEventListener('common-upload-success', onCommonUploadSuccess);
       el.removeEventListener('common-upload-start', onCommonUploadStart);
     };
-  }, [pubkey]);
+  }, [pubkey, clientInfo]);
+
+  const handleContinue = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const name = fullName.trim();
+    const project = projectName.trim();
+    if (!name || !project) return;
+    setClientInfo({ fullName: name, projectName: project });
+  };
+
+  const handleUploadMoreFiles = () => {
+    setClientInfo(null);
+    setFullName('');
+    setProjectName('');
+    setUploadSuccessMessage(null);
+  };
+
+  const metadataJson = clientInfo ? JSON.stringify(buildUploadMetadata(clientInfo)) : '';
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -77,16 +106,73 @@ export function DropboxUploadArea() {
           <h3 className="text-2xl md:text-3xl tracking-tight" style={{ fontWeight: 900 }}>
             Document Upload Area
           </h3>
-          <p className="text-foreground/70 tracking-wide max-w-xl mx-auto">
-            Upload project documents from your device or capture photos with your camera. You can add multiple files in one session.
-          </p>
+          {!pubkey ? (
+            <p className="text-foreground/70 tracking-wide max-w-xl mx-auto">
+              File uploads are not configured for this environment.
+            </p>
+          ) : clientInfo ? (
+            <p className="text-foreground/70 tracking-wide max-w-xl mx-auto">
+              Upload project documents from your device or capture photos with your camera. You can add multiple files in one
+              session.
+            </p>
+          ) : (
+            <p className="text-foreground/70 tracking-wide max-w-xl mx-auto">
+              Enter your name and project so we can label your uploads. You will open the uploader on the next step.
+            </p>
+          )}
         </div>
 
         {!pubkey ? (
           <p className="text-sm text-foreground/60">
-            File uploads are not configured. Set <code className="text-[#C9A84C]">VITE_UPLOADCARE_PUBLIC_KEY</code> in your
-            environment.
+            Set <code className="text-[#C9A84C]">VITE_UPLOADCARE_PUBLIC_KEY</code> in your environment.
           </p>
+        ) : !clientInfo ? (
+          <form
+            onSubmit={handleContinue}
+            className="mx-auto max-w-md space-y-5 text-left"
+            noValidate
+          >
+            <div className="space-y-2">
+              <label htmlFor="dropbox-client-full-name" className="block text-xs font-semibold uppercase tracking-widest text-[#C9A84C]">
+                Full name
+              </label>
+              <input
+                id="dropbox-client-full-name"
+                name="fullName"
+                type="text"
+                autoComplete="name"
+                required
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="w-full rounded-md border border-white/15 bg-[#0a0a0a] px-4 py-3 text-sm tracking-wide text-foreground outline-none transition-colors placeholder:text-foreground/40 focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C]"
+                placeholder="Jane Doe"
+              />
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="dropbox-project-name" className="block text-xs font-semibold uppercase tracking-widest text-[#C9A84C]">
+                Project name
+              </label>
+              <input
+                id="dropbox-project-name"
+                name="projectName"
+                type="text"
+                autoComplete="organization"
+                required
+                value={projectName}
+                onChange={(e) => setProjectName(e.target.value)}
+                className="w-full rounded-md border border-white/15 bg-[#0a0a0a] px-4 py-3 text-sm tracking-wide text-foreground outline-none transition-colors placeholder:text-foreground/40 focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C]"
+                placeholder="e.g. Alpine Manor"
+              />
+            </div>
+            <div className="pt-1">
+              <button
+                type="submit"
+                className="w-full rounded-md bg-[#C9A84C] px-6 py-3.5 text-sm font-semibold uppercase tracking-wider text-[#141410] transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141410]"
+              >
+                Continue to Upload
+              </button>
+            </div>
+          </form>
         ) : (
           <div className="text-center">
             <uc-config
@@ -95,6 +181,7 @@ export function DropboxUploadArea() {
               source-list="local, camera"
               multiple="true"
               use-cloud-image-editor="false"
+              metadata={metadataJson}
             />
             <uc-upload-ctx-provider
               ref={(node) => {
@@ -110,9 +197,18 @@ export function DropboxUploadArea() {
               ctx-name={CTX_NAME}
             />
             {uploadSuccessMessage ? (
-              <p className="mt-4 text-center text-sm font-medium tracking-wide text-[#C9A84C]" role="status">
-                {uploadSuccessMessage}
-              </p>
+              <div className="mt-6 flex flex-col items-center gap-4">
+                <p className="text-center text-sm font-medium tracking-wide text-[#C9A84C]" role="status">
+                  {uploadSuccessMessage}
+                </p>
+                <button
+                  type="button"
+                  onClick={handleUploadMoreFiles}
+                  className="rounded-md border-2 border-[#C9A84C] bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[#C9A84C] transition-colors hover:bg-[#C9A84C]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#141410]"
+                >
+                  Upload More Files
+                </button>
+              </div>
             ) : null}
           </div>
         )}
