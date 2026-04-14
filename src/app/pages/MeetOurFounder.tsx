@@ -2,7 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 const FOUNDER_HERO_MOBILE_SRC = '/images/FounderMobileHero.png';
-const FOUNDER_HERO_DESKTOP_SRC = '/images/FounderHero2.png';
+const FOUNDER_HERO_DESKTOP_SRC = '/images/FounderDesktopHero2.png';
 
 const CREDENTIAL_CHIPS = ['Utah Licensed GC', '15+ Years', 'Proud Dad'] as const;
 
