@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
 const customHomes = [
@@ -13,6 +14,13 @@ const customHomes = [
 export function OurWork() {
   return (
     <main className="bg-background">
+      <Helmet>
+        <title>Our Work | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="Explore Prodigy Builders' portfolio of custom homes and commercial projects across Utah — including the award-winning Berkshire Villa."
+        />
+      </Helmet>
       <section className="w-full pb-16 pt-28">
         <div className="relative overflow-hidden rounded-xl">
           <img

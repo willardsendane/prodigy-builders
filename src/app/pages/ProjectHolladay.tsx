@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
@@ -26,6 +27,13 @@ export function ProjectHolladay() {
 
   return (
     <main className="bg-background text-foreground">
+      <Helmet>
+        <title>Holladay | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="A custom home builder project in Holladay, Salt Lake County — built to the highest standards of craftsmanship and design."
+        />
+      </Helmet>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
         <Link
           to="/our-work"

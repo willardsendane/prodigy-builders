@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
@@ -36,6 +37,13 @@ export function ProjectCottonwood() {
 
   return (
     <main className="bg-background text-foreground">
+      <Helmet>
+        <title>Cottonwood View | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="A luxury remodel in Salt Lake County showcasing Prodigy Builders' precision craftsmanship."
+        />
+      </Helmet>
       <section className="pb-16 pt-28">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
         <Link

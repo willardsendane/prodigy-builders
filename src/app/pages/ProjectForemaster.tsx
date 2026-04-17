@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
@@ -46,6 +47,13 @@ export function ProjectForemaster() {
 
   return (
     <main className="bg-background text-foreground">
+      <Helmet>
+        <title>Foremaster Ridge | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="A fully custom luxury home built in Southern Utah — precision craftsmanship from foundation to finish."
+        />
+      </Helmet>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
         <Link
           to="/our-work"

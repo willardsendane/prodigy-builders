@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
@@ -24,6 +25,13 @@ export function ProjectBerkshire() {
 
   return (
     <main className="bg-background text-foreground">
+      <Helmet>
+        <title>Berkshire Villa | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="Prodigy Builders' flagship custom home — a landmark build showcasing Utah's finest residential craftsmanship."
+        />
+      </Helmet>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
         <Link
           to="/our-work"

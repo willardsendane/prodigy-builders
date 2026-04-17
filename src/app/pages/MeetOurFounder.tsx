@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
@@ -11,6 +12,13 @@ export function MeetOurFounder() {
 
   return (
     <main className="min-w-0 overflow-x-hidden">
+      <Helmet>
+        <title>Meet Our Founder | Thatcher Lamb | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="Thatcher Lamb started swinging a hammer at 14. Today he leads Prodigy Builders — Utah's most trusted custom home and commercial contractor."
+        />
+      </Helmet>
       <section className="relative isolate w-full min-w-0 overflow-hidden">
         <div className="relative w-full">
           <ImageWithFallback

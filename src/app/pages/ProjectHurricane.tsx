@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
@@ -45,6 +46,13 @@ export function ProjectHurricane() {
 
   return (
     <main className="bg-background text-foreground">
+      <Helmet>
+        <title>Hurricane Retreat | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="A large-scale custom home in Hurricane, UT featuring expansive living spaces and premium finishes throughout."
+        />
+      </Helmet>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
         <Link
           to="/our-work"

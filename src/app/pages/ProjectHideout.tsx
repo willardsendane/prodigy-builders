@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 
@@ -30,6 +31,13 @@ export function ProjectHideout() {
 
   return (
     <main className="bg-background text-foreground">
+      <Helmet>
+        <title>Hideout | Prodigy Builders</title>
+        <meta
+          name="description"
+          content="A stunning custom home build in Utah featuring dramatic architecture and premium finishes."
+        />
+      </Helmet>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-28 lg:px-8">
         <Link
           to="/our-work"
