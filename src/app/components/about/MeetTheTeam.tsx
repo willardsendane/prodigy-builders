@@ -18,26 +18,15 @@ function IconBuiltForToughest() {
         </radialGradient>
       </defs>
       <ellipse cx={CX} cy={CY} rx={58} ry={58} fill="url(#meetTeamRadialGlow1)" />
-      <g transform={`rotate(120 ${CX} ${CY})`}>
-        <path
-          d={`M ${CX} ${CY} m 0 -38 A 38 38 0 0 1 ${CX - 17.1} ${CY + 37} L ${CX} ${CY} Z`}
-          fill="none"
-          stroke="#6B5010"
-          strokeWidth={1.5}
-          opacity={0.4}
-        />
-      </g>
-      <g transform={`rotate(240 ${CX} ${CY})`}>
-        <path
-          d={`M ${CX} ${CY} m 0 -38 A 38 38 0 0 1 ${CX - 17.1} ${CY + 37} L ${CX} ${CY} Z`}
-          fill="none"
-          stroke="#6B5010"
-          strokeWidth={1.5}
-          opacity={0.4}
-        />
-      </g>
       <path
-        d={`M ${CX} ${CY} m 0 -38 A 38 38 0 0 1 ${CX - 17.1} ${CY + 37} L ${CX} ${CY} Z`}
+        d={`M ${CX} ${CY} L ${CX + 32.9} ${CY + 19} A 38 38 0 0 1 ${CX - 32.9} ${CY + 19} A 38 38 0 0 1 ${CX} ${CY - 38} Z`}
+        fill="none"
+        stroke="#6B5010"
+        strokeWidth={1.5}
+        opacity={0.4}
+      />
+      <path
+        d={`M ${CX} ${CY} L ${CX} ${CY - 38} A 38 38 0 0 1 ${CX + 32.9} ${CY + 19} Z`}
         fill="#7A5C12"
       />
     </svg>
