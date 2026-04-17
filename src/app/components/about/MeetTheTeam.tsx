@@ -10,7 +10,11 @@ export function MeetTheTeam() {
   return (
     <section className="min-w-0 overflow-x-hidden bg-[#0d0d0d]">
       <div className="mx-auto max-w-[720px] px-12 py-16">
-        <p className="mb-[56px] text-center text-xs uppercase tracking-[0.3em] text-[#C9A84C]/50">OUR PROCESS</p>
+        <p
+          className="mb-[56px] text-center text-sm uppercase tracking-[0.3em] text-[#C9A84C]"
+        >
+          OUR PROCESS
+        </p>
 
         <div className="relative flex flex-col">
           <div className="pointer-events-none absolute w-px" style={timelineLineStyle} aria-hidden />
