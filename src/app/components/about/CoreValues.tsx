@@ -20,8 +20,8 @@ export function CoreValues() {
   ];
 
   return (
-    <section className="w-full min-w-0 overflow-x-hidden bg-[#0f0f0f] px-16 py-32 lg:px-20">
-      <div className="container mx-auto min-w-0 max-w-full px-0">
+    <section className="w-full min-w-0 overflow-x-hidden bg-[#0f0f0f] py-32">
+      <div className="container mx-auto min-w-0 max-w-full px-6 lg:px-12">
         <div className="min-w-0">
           {/* Decorative line above section label */}
           <div className="mx-auto mb-8 h-px w-24 bg-accent/30"></div>
@@ -35,7 +35,7 @@ export function CoreValues() {
             Built Like It&apos;s Our Own.
           </h2>
 
-          <div className="mx-auto min-w-0 w-full px-6 md:max-w-[70%] md:px-0">
+          <div className="mx-auto min-w-0 w-full md:max-w-[70%]">
             <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-3">
               {values.map((value, index) => {
                 const Icon = value.icon;
@@ -47,7 +47,7 @@ export function CoreValues() {
                     <h3 className="mb-4 break-words text-2xl tracking-wider text-foreground" style={{ fontWeight: 600 }}>
                       {value.title}
                     </h3>
-                    <p className="break-words px-8 leading-relaxed text-foreground/70">{value.description}</p>
+                    <p className="break-words max-md:px-0 md:px-8 leading-relaxed text-foreground/70">{value.description}</p>
                   </div>
                 );
               })}
