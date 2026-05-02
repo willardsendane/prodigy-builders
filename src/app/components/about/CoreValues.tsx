@@ -35,12 +35,12 @@ export function CoreValues() {
             Built Like It&apos;s Our Own.
           </h2>
 
-          <div className="mx-auto min-w-0 max-w-[70%]">
+          <div className="mx-auto min-w-0 w-full px-6 md:max-w-[70%] md:px-0">
             <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-3">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
-                  <div key={index} className="min-w-0 px-10 py-8 text-center">
+                  <div key={index} className="min-w-0 max-md:px-2 md:px-10 py-8 text-center">
                     <div className="mb-6 flex justify-center">
                       <Icon className="h-12 w-12 shrink-0 text-accent" strokeWidth={1} />
                     </div>
