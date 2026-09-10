@@ -2,13 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
 const customHomes = [
+  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png', href: '/our-work/hideout' },
+  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png', href: '/our-work/traverse-outlook' },
+  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png', href: '/our-work/hurricane-retreat' },
+  { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/our-work/foremaster-ridge' },
+  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png', href: '/our-work/holladay' },
   { name: 'Alpine Manor', imageUrl: '/images/Alpine_V1.1.png', href: '/our-work/alpine-manor' },
   { name: 'Cottonwood View', imageUrl: '/images/Cottonwood_V1.png', href: '/our-work/cottonwood-view' },
-  { name: 'Foremaster Ridge', imageUrl: '/images/Foremaster_V5.png', href: '/our-work/foremaster-ridge' },
-  { name: 'Hideout', imageUrl: '/images/Hideout_V1.png', href: '/our-work/hideout' },
-  { name: 'Holladay', imageUrl: '/images/Holladay_V1.png', href: '/our-work/holladay' },
-  { name: 'Hurricane Retreat', imageUrl: '/images/Hurricane_V1.png', href: '/our-work/hurricane-retreat' },
-  { name: 'Traverse Outlook', imageUrl: '/images/TraverseOutlook_V1.png', href: '/our-work/traverse-outlook' },
 ];
 
 export function OurWork() {
